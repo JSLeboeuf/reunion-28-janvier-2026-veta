@@ -1,0 +1,2881 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VETA - Rencontre Direction | 28 janvier 2026</title>
+<style>
+:root{--bg:#ffffff;--surface:#f8f9fb;--surface2:#f0f2f5;--border:#e2e5ea;--text:#1e1e1e;--text2:#555d65;--accent:#3858e9;--accent-light:rgba(56,88,233,.08);--green:#0d7a3e;--green-bg:rgba(13,122,62,.07);--red:#c41e1e;--red-bg:rgba(196,30,30,.06);--yellow:#9a6700;--yellow-bg:rgba(154,103,0,.07);--orange:#b45309;--orange-bg:rgba(180,83,9,.07)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.page{max-width:1200px;margin:0 auto;padding:40px 32px}
+.header{text-align:center;padding:48px 0 40px;border-bottom:2px solid var(--accent);margin-bottom:48px}
+.header-logo{font-size:14px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+.header h1{font-size:32px;font-weight:700;margin-bottom:8px;color:var(--text)}
+.header-sub{font-size:16px;color:var(--text2)}
+.header-date{display:inline-block;margin-top:16px;padding:6px 16px;background:var(--accent-light);border:1px solid rgba(56,88,233,.2);border-radius:20px;font-size:13px;color:var(--accent);font-weight:600}
+.section{margin-bottom:56px}
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--border)}
+.section-num{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;font-size:16px;font-weight:700}
+.section-num.blue{background:var(--accent-light);color:var(--accent)}
+.section-num.red{background:var(--red-bg);color:var(--red)}
+.section-num.green{background:var(--green-bg);color:var(--green)}
+.section-num.purple{background:rgba(109,40,217,.08);color:#6d28d9}
+.section-num.cyan{background:rgba(14,116,144,.08);color:#0e7490}
+.section-title{font-size:22px;font-weight:700;color:var(--text)}
+.exec-summary{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:48px}
+.exec-summary h2{font-size:20px;font-weight:700;color:var(--text);margin-bottom:20px;letter-spacing:-.01em}
+.exec-summary .verdict{font-size:15px;line-height:1.8;color:var(--text)}
+.exec-summary .verdict strong{color:var(--text)}
+.exec-summary .verdict .red{color:var(--red)}.exec-summary .verdict .green{color:var(--green)}.exec-summary .verdict .orange{color:var(--orange)}
+.exec-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid var(--border)}
+.exec-kpi{text-align:center;padding:12px}
+.exec-kpi .ek-val{font-size:24px;font-weight:700;margin-bottom:2px}
+.exec-kpi .ek-lab{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--text2)}
+.hero-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px}
+.hero-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center}
+.hero-card .label{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--text2);margin-bottom:8px}
+.hero-card .value{font-size:28px;font-weight:700;color:var(--text)}
+.hero-card .sub{font-size:12px;color:var(--text2);margin-top:4px}
+.badge{display:inline-block;margin-top:8px;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.badge-green{background:var(--green-bg);color:var(--green)}
+.badge-red{background:var(--red-bg);color:var(--red)}
+.badge-yellow{background:var(--yellow-bg);color:var(--yellow)}
+table{width:100%;border-collapse:collapse;margin-bottom:24px}
+thead th{text-align:left;padding:10px 14px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--text2);border-bottom:2px solid var(--border);background:var(--surface)}
+thead th:first-child{border-radius:8px 0 0 0}thead th:last-child{border-radius:0 8px 0 0}
+tbody td{padding:12px 14px;font-size:14px;border-bottom:1px solid var(--border)}
+tbody tr:hover{background:var(--surface)}
+.text-right{text-align:right}.text-center{text-align:center}
+.mono{font-family:'SF Mono','Fira Code',monospace;font-size:13px}
+.text-green{color:var(--green)}.text-red{color:var(--red)}.text-yellow{color:var(--yellow)}.text-orange{color:var(--orange)}.text-muted{color:var(--text2)}.bold{font-weight:700}
+.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:24px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px}
+.card-full{grid-column:1/-1}
+.card h3{font-size:15px;font-weight:600;color:var(--text);margin-bottom:12px}
+.card p{font-size:14px;color:var(--text2);margin-bottom:8px}
+.problem-card{background:var(--surface);border-left:4px solid var(--red);border-radius:0 12px 12px 0;padding:20px 24px;margin-bottom:16px}
+.problem-card.sev-high{border-left-color:var(--red)}.problem-card.sev-med{border-left-color:var(--orange)}.problem-card.sev-fix{border-left-color:var(--green)}
+.problem-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.tag{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.tag-crit{background:var(--red-bg);color:var(--red)}.tag-med{background:var(--orange-bg);color:var(--orange)}.tag-fix{background:var(--green-bg);color:var(--green)}
+.problem-detail{font-size:13px;color:var(--text2);line-height:1.7}
+.problem-impact{margin-top:8px;font-size:13px;color:var(--text);font-weight:600}
+.sol-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:16px;display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start}
+.sol-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.sol-icon.urgent{background:var(--red-bg)}.sol-icon.soon{background:var(--orange-bg)}.sol-icon.plan{background:var(--yellow-bg)}
+.sol-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px}
+.sol-desc{font-size:13px;color:var(--text2);line-height:1.6}
+.sol-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;font-size:11px}
+.sol-meta span{padding:2px 10px;border-radius:10px;background:var(--surface2);color:var(--text2)}
+.bar-chart{margin:16px 0}.bar-row{display:flex;align-items:center;margin-bottom:10px;gap:12px}
+.bar-label{width:80px;font-size:13px;color:var(--text2);text-align:right;flex-shrink:0}
+.bar-track{flex:1;height:28px;background:var(--surface2);border-radius:6px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:10px;font-size:12px;font-weight:600;color:#fff}
+.bar-fill.green{background:linear-gradient(90deg,#0d7a3e,#15a050)}.bar-fill.yellow{background:linear-gradient(90deg,#9a6700,#c08000)}.bar-fill.red{background:linear-gradient(90deg,#c41e1e,#e03e3e)}
+.bar-target{position:absolute;top:0;bottom:0;width:2px;background:var(--text);opacity:.25}
+.quarter-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.quarter-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
+.quarter-card .q-label{font-size:14px;font-weight:700;color:var(--accent);margin-bottom:8px}
+.quarter-card .q-value{font-size:20px;font-weight:700;color:var(--text);margin-bottom:4px}
+.quarter-card .q-growth{font-size:12px;font-weight:600}
+.footer{margin-top:64px;padding-top:24px;border-top:2px solid var(--accent);text-align:center;font-size:12px;color:var(--text2)}
+.sep{height:1px;background:var(--border);margin:32px 0}
+.src-badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:10px;font-weight:600;letter-spacing:.5px;margin-left:4px}
+.src-er{background:var(--accent-light);color:var(--accent)}
+.src-ezy{background:var(--green-bg);color:var(--green)}
+.src-agx{background:var(--orange-bg);color:var(--orange)}
+.src-kpi{background:rgba(109,40,217,.08);color:#6d28d9}
+.callout{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin:16px 0;font-size:14px;line-height:1.7}
+.callout-red{border-left:3px solid var(--red)}.callout-green{border-left:3px solid var(--green)}.callout-orange{border-left:3px solid var(--orange)}
+@media print{.page{padding:20px}table{font-size:12px}}
+@media(max-width:768px){.hero-grid,.exec-kpis{grid-template-columns:repeat(2,1fr)}.card-grid{grid-template-columns:1fr}.quarter-grid{grid-template-columns:1fr}.sol-card{grid-template-columns:1fr}.header h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="header">
+  <div class="header-logo">CLINIQUE VETA INC.</div>
+  <h1>Rencontre de direction</h1>
+  <div class="header-sub">Bilan Q4 2025 &middot; Pouls janvier 2026 &middot; Diagnostic &middot; Plan d'action</div>
+  <div class="header-date">28 janvier 2026 &middot; Direction médicale, Audrée &amp; Nancy</div>
+</div>
+
+<!-- ===================== SOMMAIRE EXÉCUTIF ===================== -->
+<div class="exec-summary">
+  <h2>En bref</h2>
+  <div class="verdict">
+    Résultat net estimé (MS + CMV + loyer + 10% frais généraux)&nbsp;: <strong class="red">-61 334$</strong> sur Q4 (oct&ndash;déc).
+    Le revenu tient &mdash; <strong>414 011$</strong> en Q4, stable &mdash; mais la masse salariale comptable pèse lourd.
+    <br><br>
+    <strong>Répartition des charges sur le revenu (Q4)&nbsp;:</strong>
+    Masse salariale <strong class="red">67%</strong> (cible&nbsp;: &lt;45%) &middot;
+    CMV <strong class="orange">31%</strong> &middot;
+    Loyer <strong>7%</strong> &middot;
+    Frais généraux <strong>10%</strong> = <strong class="red">115%</strong> du revenu.
+    <br><br>
+    <strong class="red">Attention&nbsp;:</strong> nos rapports internes sous-estiment la masse salariale de <strong>46K$</strong> par trimestre (ne capturent pas vacances, bonus, REER, admin).
+    <br><br>
+    <strong class="red">Le pic de décembre</strong>&nbsp;: salaires à 125K$ (91.8% du revenu &mdash; vacances et bonus).
+    <br><br>
+    <strong>Janvier 2026</strong> montre un ratio MS opérationnel de <strong class="orange">57%</strong> &mdash; au-dessus de la cible mais en amélioration par rapport au Q4.
+    Le prébooking reste un point faible à <strong class="red">37%</strong> (cible&nbsp;: 55%+).
+    Les no-shows sont sous contrôle à <strong class="green">1.5%</strong>.
+    <br><br>
+    <strong>6 leviers de croissance identifiés</strong> (prébooking, mardi, chirurgie, charges manquées, wellness plans, dentaire) avec un potentiel de <strong class="green">+176K$/trimestre</strong>.
+    La clinique n'a pas besoin de plus de patients &mdash; elle doit mieux monétiser ceux qu'elle a.
+  </div>
+
+  <div class="exec-kpis">
+    <div class="exec-kpi">
+      <div class="ek-val" style="color:var(--red)">-151K$</div>
+      <div class="ek-lab">Perte nette Q4</div>
+    </div>
+    <div class="exec-kpi">
+      <div class="ek-val" style="color:var(--red)">61.3%</div>
+      <div class="ek-lab">Ratio MS Q4</div>
+    </div>
+    <div class="exec-kpi">
+      <div class="ek-val" style="color:var(--orange)">57.0%</div>
+      <div class="ek-lab">Ratio MS Jan (ops.)</div>
+    </div>
+    <div class="exec-kpi">
+      <div class="ek-val" style="color:var(--red)">37%</div>
+      <div class="ek-lab">Prébooking Jan</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 1 : RÉSULTATS Q4 ===================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num blue">1</div>
+    <div class="section-title">Résultats financiers Q4 2025</div>
+  </div>
+
+  <p style="color:var(--text2);margin-bottom:20px;font-size:13px;">
+    Source&nbsp;: <span class="src-badge src-er">ÉTATS DES RÉSULTATS</span> comptabilité officielle (imprimés le 2026-01-23).
+    Compléments&nbsp;: <span class="src-badge src-ezy">EZYVET</span> (détail par vet) et <span class="src-badge src-agx">AGENDRIX</span> (heures travaillées).
+  </p>
+
+  <!-- ÉTAT DES RÉSULTATS COMPLET -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>État des résultats &mdash; Septembre à Décembre 2025</h3>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="text-right">Sept</th>
+          <th class="text-right">Oct</th>
+          <th class="text-right">Nov</th>
+          <th class="text-right">Dec</th>
+          <th class="text-right bold">Q4 (Oct-Dec)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="bold">VENTES NETTES</td>
+          <td class="text-right mono">152 797$</td>
+          <td class="text-right mono">144 170$</td>
+          <td class="text-right mono">133 736$</td>
+          <td class="text-right mono">136 105$</td>
+          <td class="text-right mono bold">414 011$</td>
+        </tr>
+        <tr>
+          <td class="text-muted" style="padding-left:24px">Ventes clinique</td>
+          <td class="text-right mono text-muted">148 415$</td>
+          <td class="text-right mono text-muted">140 034$</td>
+          <td class="text-right mono text-muted">127 716$</td>
+          <td class="text-right mono text-muted">127 879$</td>
+          <td class="text-right mono text-muted">395 629$</td>
+        </tr>
+        <tr>
+          <td class="text-muted" style="padding-left:24px">Boutique en ligne</td>
+          <td class="text-right mono text-muted">4 383$</td>
+          <td class="text-right mono text-muted">4 136$</td>
+          <td class="text-right mono text-muted">6 020$</td>
+          <td class="text-right mono text-muted">8 227$</td>
+          <td class="text-right mono text-muted">18 383$</td>
+        </tr>
+        <tr><td colspan="6" style="height:4px;padding:0;border:0"></td></tr>
+        <tr>
+          <td>Coût des marchandises (CMV)</td>
+          <td class="text-right mono">27 960$</td>
+          <td class="text-right mono">40 774$</td>
+          <td class="text-right mono">43 763$</td>
+          <td class="text-right mono">45 850$</td>
+          <td class="text-right mono bold">130 387$</td>
+        </tr>
+        <tr>
+          <td class="text-muted" style="padding-left:24px"><em>% du revenu</em></td>
+          <td class="text-right mono text-muted">18.3%</td>
+          <td class="text-right mono text-muted">28.3%</td>
+          <td class="text-right mono text-muted">32.7%</td>
+          <td class="text-right mono text-muted">33.7%</td>
+          <td class="text-right mono text-muted">31.5%</td>
+        </tr>
+        <tr>
+          <td class="bold">Charges salariales <span class="src-badge" style="background:#1e40af;color:#fff;font-size:10px;padding:1px 6px;border-radius:4px;margin-left:4px">ER</span></td>
+          <td class="text-right mono">74 728$</td>
+          <td class="text-right mono">71 942$</td>
+          <td class="text-right mono">79 730$</td>
+          <td class="text-right mono text-red bold">124 884$</td>
+          <td class="text-right mono bold">276 556$</td>
+        </tr>
+        <tr>
+          <td class="text-muted" style="padding-left:24px"><em>% du revenu</em></td>
+          <td class="text-right mono text-orange">48.9%</td>
+          <td class="text-right mono text-orange">49.9%</td>
+          <td class="text-right mono text-red">59.6%</td>
+          <td class="text-right mono text-red">91.8%</td>
+          <td class="text-right mono text-red">66.8%</td>
+        </tr>
+        <tr>
+          <td class="text-muted" style="padding-left:24px">Salaires &amp; traitements</td>
+          <td class="text-right mono text-muted">65 554$</td>
+          <td class="text-right mono text-muted">60 502$</td>
+          <td class="text-right mono text-muted">65 363$</td>
+          <td class="text-right mono text-muted">104 889$</td>
+          <td class="text-right mono text-muted">230 754$</td>
+        </tr>
+        <tr>
+          <td class="text-muted" style="padding-left:24px">Reconnaissance (bonus)</td>
+          <td class="text-right mono text-muted">240$</td>
+          <td class="text-right mono text-muted">728$</td>
+          <td class="text-right mono text-muted">3 146$</td>
+          <td class="text-right mono text-muted">4 159$</td>
+          <td class="text-right mono text-muted">8 033$</td>
+        </tr>
+        <tr>
+          <td class="text-muted" style="padding-left:24px">REER collectif</td>
+          <td class="text-right mono text-muted">4 283$</td>
+          <td class="text-right mono text-muted">971$</td>
+          <td class="text-right mono text-muted">875$</td>
+          <td class="text-right mono text-muted">1 332$</td>
+          <td class="text-right mono text-muted">3 178$</td>
+        </tr>
+        <tr>
+          <td>Loyer</td>
+          <td class="text-right mono">9 000$</td>
+          <td class="text-right mono">9 000$</td>
+          <td class="text-right mono">9 000$</td>
+          <td class="text-right mono">9 000$</td>
+          <td class="text-right mono bold">27 000$</td>
+        </tr>
+        <tr>
+          <td class="text-muted" style="padding-left:24px"><em>% du revenu</em></td>
+          <td class="text-right mono text-muted">5.9%</td>
+          <td class="text-right mono text-muted">6.2%</td>
+          <td class="text-right mono text-muted">6.7%</td>
+          <td class="text-right mono text-muted">6.6%</td>
+          <td class="text-right mono text-muted">6.5%</td>
+        </tr>
+        <tr>
+          <td>Frais généraux (estimé)</td>
+          <td class="text-right mono">15 280$</td>
+          <td class="text-right mono">14 417$</td>
+          <td class="text-right mono">13 374$</td>
+          <td class="text-right mono">13 611$</td>
+          <td class="text-right mono bold">41 401$</td>
+        </tr>
+        <tr>
+          <td class="text-muted" style="padding-left:24px"><em>% du revenu</em></td>
+          <td class="text-right mono text-muted">10.0%</td>
+          <td class="text-right mono text-muted">10.0%</td>
+          <td class="text-right mono text-muted">10.0%</td>
+          <td class="text-right mono text-muted">10.0%</td>
+          <td class="text-right mono text-muted">10.0%</td>
+        </tr>
+        <tr><td colspan="6" style="height:4px;padding:0;border:0"></td></tr>
+        <tr>
+          <td class="bold">TOTAL CHARGES</td>
+          <td class="text-right mono bold">126 968$</td>
+          <td class="text-right mono bold">136 133$</td>
+          <td class="text-right mono bold">145 867$</td>
+          <td class="text-right mono bold">193 345$</td>
+          <td class="text-right mono bold">475 344$</td>
+        </tr>
+        <tr style="background:var(--surface2)">
+          <td class="bold" style="font-size:16px">RÉSULTAT NET</td>
+          <td class="text-right mono bold text-green" style="font-size:16px">+25 829$</td>
+          <td class="text-right mono bold text-green" style="font-size:16px">+8 037$</td>
+          <td class="text-right mono bold text-red" style="font-size:16px">-12 131$</td>
+          <td class="text-right mono bold text-red" style="font-size:16px">-57 240$</td>
+          <td class="text-right mono bold text-red" style="font-size:16px">-61 334$</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-red">
+      <strong>Lecture clé&nbsp;:</strong> Le revenu est stable autour de 138K$/mois. Avec MS (ER) + CMV + loyer + 10% frais généraux, le résultat net est de <strong>-61K$</strong> en Q4.
+      Sept-Oct sont rentables. Novembre et décembre creusent le déficit (pic salarial de décembre à 125K$).
+    </div>
+  </div>
+
+  <!-- RATIO MS -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Ratio masse salariale sur revenu &mdash; la métrique qui compte</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      Ce ratio mesure combien de chaque dollar de revenu va aux salaires. En vétérinaire, la cible est sous 45% (réf. AAHA/VHMA).
+    </p>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">Sept</div>
+        <div class="bar-track">
+          <div class="bar-fill yellow" style="width:48.9%">48.9%</div>
+          <div class="bar-target" style="left:45%"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Oct</div>
+        <div class="bar-track">
+          <div class="bar-fill yellow" style="width:49.9%">49.9%</div>
+          <div class="bar-target" style="left:45%"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Nov</div>
+        <div class="bar-track">
+          <div class="bar-fill red" style="width:59.6%">59.6%</div>
+          <div class="bar-target" style="left:45%"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Dec</div>
+        <div class="bar-track">
+          <div class="bar-fill red" style="width:91.8%">91.8%</div>
+          <div class="bar-target" style="left:45%"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label bold">Jan (ops.)</div>
+        <div class="bar-track">
+          <div class="bar-fill red" style="width:57%">57.0%</div>
+          <div class="bar-target" style="left:45%"></div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--text2)">
+      La ligne blanche = cible 45%. Décembre à 91.8% s'explique par les 125K$ de salaires (vacances + bonus).
+      Janvier opérationnel à 57% est en amélioration mais reste au-dessus de la cible.
+    </p>
+  </div>
+
+  <!-- ÉCART RAPPORTS vs RÉALITÉ -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Nos rapports internes sous-estiment les coûts de 46K$ <span class="src-badge" style="background:#dc2626;color:#fff;font-size:10px;padding:1px 6px;border-radius:4px">IMPORTANT</span></h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:12px">
+      Les tableaux de bord actuels utilisent les données <strong>Agendrix</strong> (heures travaillées) pour estimer la masse salariale.
+      Mais Agendrix ne capture pas les bonus, les vacances, la reconnaissance, ni les salaires admin.
+      Résultat&nbsp;: nos rapports montrent un ratio MS de ~55% alors que la réalité comptable est <strong class="red">67%</strong>.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Mois</th>
+          <th class="text-right">Réalité (ER)</th>
+          <th class="text-right">Nos rapports</th>
+          <th class="text-right">Écart</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Octobre</td>
+          <td class="text-right mono">71 942$</td>
+          <td class="text-right mono">72 146$</td>
+          <td class="text-right mono text-muted">~OK</td>
+        </tr>
+        <tr>
+          <td>Novembre</td>
+          <td class="text-right mono">79 730$</td>
+          <td class="text-right mono">70 415$</td>
+          <td class="text-right mono text-red">-9 315$</td>
+        </tr>
+        <tr>
+          <td>Décembre</td>
+          <td class="text-right mono">124 884$</td>
+          <td class="text-right mono">87 741$</td>
+          <td class="text-right mono text-red">-37 143$</td>
+        </tr>
+        <tr class="bold">
+          <td>Q4</td>
+          <td class="text-right mono">276 556$</td>
+          <td class="text-right mono">230 302$</td>
+          <td class="text-right mono text-red">-46 254$</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout callout-red">
+      <strong>Action requise&nbsp;:</strong> Il faut intégrer les données comptables réelles (vacances, bonus, REER, salaires admin)
+      dans nos rapports pour que le ratio MS reflète la vraie situation. Le KPI quotidien actuel est un plancher, pas la réalité.
+    </div>
+  </div>
+
+  <!-- PRODUCTION PAR VET Q4 -->
+  <div class="card card-full">
+    <h3>Production par vétérinaire &mdash; Q4 2025 <span class="src-badge src-ezy">EZYVET</span></h3>
+    <table>
+      <thead><tr><th>Vétérinaire</th><th class="text-right">Total Q4 (HT)</th><th class="text-right">Factures</th><th class="text-right">Moy./fact.</th><th class="text-right">Oct (TTC)</th><th class="text-right">Nov (TTC)</th><th class="text-right">Déc (TTC)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Dre Cockburn (#60)</strong></td><td class="text-right mono bold">156 571$</td><td class="text-right">489</td><td class="text-right mono">320$</td><td class="text-right mono">76 448$</td><td class="text-right mono">48 242$</td><td class="text-right mono">55 305$</td></tr>
+        <tr><td><strong>Dre Cohen (#133)</strong></td><td class="text-right mono bold">118 702$</td><td class="text-right">476</td><td class="text-right mono">249$</td><td class="text-right mono">56 529$</td><td class="text-right mono">38 449$</td><td class="text-right mono">41 455$</td></tr>
+        <tr><td><strong>Dre Brazeau (#161)</strong></td><td class="text-right mono bold">60 853$</td><td class="text-right">231</td><td class="text-right mono">263$</td><td class="text-right mono">4 969$</td><td class="text-right mono">37 600$</td><td class="text-right mono">27 381$</td></tr>
+        <tr><td class="text-muted">Autres (4 vets)</td><td class="text-right mono text-muted">8 710$</td><td class="text-right text-muted">85</td><td class="text-right mono text-muted">&mdash;</td><td class="text-right" colspan="3"></td></tr>
+        <tr class="bold"><td>Total attribué</td><td class="text-right mono">344 836$</td><td class="text-right">1 281</td><td class="text-right mono">269$ HT</td><td class="text-right" colspan="3"></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--text2)">
+      Dre Cockburn génère 45% du revenu attribué. Dre Brazeau&nbsp;: montée en puissance remarquable de 5K$ en octobre à 38K$ en novembre.
+      <br><em>Note&nbsp;: les totaux Q4 sont hors taxes (HT, export EzyVet), les ventilations mensuelles incluent les taxes (TTC). Le facteur est de ~87% (HT/TTC).</em>
+    </p>
+  </div>
+</div>
+
+<!-- ===================== SECTION 2 : JANVIER 2026 ===================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num purple">2</div>
+    <div class="section-title">Janvier 2026 &mdash; Pouls opérationnel</div>
+  </div>
+
+  <p style="color:var(--text2);margin-bottom:20px;font-size:13px;">
+    Sources&nbsp;: <span class="src-badge src-ezy">EZYVET</span> (revenu, factures, production par vet) et <span class="src-badge src-kpi">RAPPORT KPI QUOTIDIEN</span> (12 au 24 janvier).
+    Pas d'État des résultats disponible pour janvier &mdash; ces chiffres sont opérationnels, pas comptables.
+  </p>
+
+  <div class="hero-grid">
+    <div class="hero-card">
+      <div class="label">Revenu Jan (partiel)</div>
+      <div class="value">~86 159$</div>
+      <div class="sub">13 jours ouverts sur ~22</div>
+    </div>
+    <div class="hero-card">
+      <div class="label">Revenu moyen/jour</div>
+      <div class="value">6 628$</div>
+      <div class="sub">vs 6 370$/jour en Q4</div>
+      <span class="badge badge-green">+4% vs Q4</span>
+    </div>
+    <div class="hero-card">
+      <div class="label">Ratio MS (ops.)</div>
+      <div class="value" style="color:var(--orange)">57.0%</div>
+      <div class="sub">Cible : sous 45%</div>
+      <span class="badge badge-yellow">En progression vs Q4 (61%)</span>
+    </div>
+    <div class="hero-card">
+      <div class="label">Prébooking</div>
+      <div class="value" style="color:var(--red)">37.3%</div>
+      <div class="sub">Cible : 55%+</div>
+      <span class="badge badge-red">Insuffisant</span>
+    </div>
+  </div>
+
+  <!-- COMPARATIF HEBDOMADAIRE -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Semaine par semaine &mdash; Janvier 2026</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Indicateur</th>
+          <th class="text-right">Sem. 12-16 jan</th>
+          <th class="text-right">Sem. 19-23 jan</th>
+          <th class="text-right">Tendance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Revenu total</td>
+          <td class="text-right mono">36 646$</td>
+          <td class="text-right mono">32 194$</td>
+          <td class="text-right"><span class="badge badge-red">-12% par jour</span></td>
+        </tr>
+        <tr>
+          <td>Revenu moyen par jour</td>
+          <td class="text-right mono">7 329$</td>
+          <td class="text-right mono">6 439$</td>
+          <td class="text-right text-red">-890$/jour</td>
+        </tr>
+        <tr>
+          <td>Ratio masse salariale</td>
+          <td class="text-right mono">54.5%</td>
+          <td class="text-right mono">59.4%</td>
+          <td class="text-right"><span class="badge badge-red">+4.9 pts</span></td>
+        </tr>
+        <tr>
+          <td>Prébooking</td>
+          <td class="text-right mono">40.5%</td>
+          <td class="text-right mono">34.1%</td>
+          <td class="text-right"><span class="badge badge-red">-6.4 pts</span></td>
+        </tr>
+        <tr>
+          <td>No-show</td>
+          <td class="text-right mono">2.4%</td>
+          <td class="text-right mono">0.5%</td>
+          <td class="text-right"><span class="badge badge-green">Excellent</span></td>
+        </tr>
+        <tr>
+          <td>Valeur moyenne par visite</td>
+          <td class="text-right mono">220$</td>
+          <td class="text-right mono">189$</td>
+          <td class="text-right"><span class="badge badge-yellow">-14%</span></td>
+        </tr>
+        <tr>
+          <td>Nouveaux clients</td>
+          <td class="text-right mono">17</td>
+          <td class="text-right mono">15</td>
+          <td class="text-right text-muted">Stable</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout callout-red">
+      <strong>Tendance à surveiller&nbsp;:</strong> La 2e semaine montre une dégradation du revenu par jour (-12%), du ratio MS (+5 pts),
+      du prébooking (-6 pts) et de la valeur par visite (-14%). Seul le no-show s'améliore.
+      <strong>Le prébooking à 34% est le signal le plus préoccupant</strong> &mdash; seulement un patient sur trois a un prochain rendez-vous en partant.
+    </div>
+  </div>
+
+  <!-- PRODUCTION PAR VET JANVIER -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Production par vétérinaire &mdash; Janvier 2026 (12-23 jan) <span class="src-badge src-ezy">EZYVET</span></h3>
+    <div class="quarter-grid">
+      <div class="quarter-card">
+        <div class="q-label">Dre Cockburn</div>
+        <div class="q-value">22 689$</div>
+        <div class="q-growth" style="color:var(--green)">Top productrice &middot; 492 lignes</div>
+      </div>
+      <div class="quarter-card">
+        <div class="q-label">Dre Brazeau</div>
+        <div class="q-value">21 730$</div>
+        <div class="q-growth" style="color:var(--green)">Confirme la montée en puissance</div>
+      </div>
+      <div class="quarter-card">
+        <div class="q-label">Dre Cohen</div>
+        <div class="q-value">19 179$</div>
+        <div class="q-growth" style="color:var(--text2)">538 lignes &middot; moy./ligne plus basse</div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--text2)">
+      Les 3 vétérinaires principales représentent 83% du revenu. L'équilibre de production est meilleur qu'en Q4.
+      Dre Brazeau confirme son intégration avec un rythme équivalent à Dre Cockburn.
+    </p>
+  </div>
+
+  <!-- JOURS CRITIQUES -->
+  <div class="card card-full">
+    <h3>Jours à investiguer en janvier</h3>
+    <table>
+      <thead><tr><th>Date</th><th>Signal</th><th class="text-right">Revenu</th><th class="text-right">Ratio MS</th><th>Commentaire</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="mono">Jan 14</td>
+          <td><span class="tag tag-crit">Ratio 81%</span></td>
+          <td class="text-right mono">3 924$</td>
+          <td class="text-right mono text-red">80.8%</td>
+          <td class="text-muted" style="font-size:13px">Journée faible en revenu mais équipe complète. Revoir la dotation des mardis.</td>
+        </tr>
+        <tr>
+          <td class="mono">Jan 20</td>
+          <td><span class="tag tag-crit">Ratio 76%</span></td>
+          <td class="text-right mono">6 219$</td>
+          <td class="text-right mono text-red">76.1%</td>
+          <td class="text-muted" style="font-size:13px">Masse salariale trop élevée par rapport au volume de RDV.</td>
+        </tr>
+        <tr>
+          <td class="mono">Jan 22</td>
+          <td><span class="tag tag-crit">Prébooking 18%</span></td>
+          <td class="text-right mono">6 759$</td>
+          <td class="text-right mono">59.5%</td>
+          <td class="text-muted" style="font-size:13px">Moins d'un patient sur cinq quitte avec un prochain rendez-vous.</td>
+        </tr>
+        <tr>
+          <td class="mono">Jan 17-18, 24</td>
+          <td><span class="tag tag-fix">Corrigé</span></td>
+          <td class="text-right mono">0$</td>
+          <td class="text-right mono text-muted">N/D</td>
+          <td class="text-muted" style="font-size:13px">Weekends &mdash; le système générait des rapports vides. Maintenant corrigé.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ===================== SECTION 3 : DIAGNOSTIC — POURQUOI ===================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num red">3</div>
+    <div class="section-title">Diagnostic &mdash; Pourquoi la clinique perd de l'argent</div>
+  </div>
+
+  <p style="color:var(--text2);margin-bottom:20px;font-size:13px;">
+    Sources&nbsp;: <span class="src-badge src-ezy">EZYVET</span> (rendez-vous, types, durées, production) &middot;
+    <span class="src-badge src-kpi">TABLEAU DE BORD V35.3</span> (scorecard par jour de semaine) &middot;
+    <span class="src-badge src-agx">AGENDRIX</span> (dotation).
+    Période analysée&nbsp;: Q4 2025 (oct-déc).
+  </p>
+
+  <div class="callout callout-red" style="margin-bottom:24px;font-size:15px">
+    <strong>Le constat en une phrase&nbsp;:</strong>
+    La clinique ne manque pas de patients. Elle perd de l'argent parce que <strong>34% du temps d'agenda ne génère aucun revenu</strong>,
+    parce que <strong>le mardi est structurellement sous-performant</strong>,
+    et parce que <strong>63% des patients repartent sans prochain rendez-vous</strong>.
+  </div>
+
+  <!-- OCCUPATION -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Taux d'occupation &mdash; La clinique tourne à 70% de capacité</h3>
+    <div class="hero-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:16px">
+      <div class="hero-card">
+        <div class="label">Capacité théorique</div>
+        <div class="value">54</div>
+        <div class="sub">RDV/jour (3 vets &times; 2 RDV/h &times; 9h)</div>
+        <p style="font-size:10px;color:var(--text2);margin-top:4px">Durée moy. réelle : 30 min/RDV (EzyVet). 3 vets actives (Cockburn, Cohen, Brazeau à partir de nov). Heures clinique : 8h-17h30 avec lunch = ~9h.</p>
+      </div>
+      <div class="hero-card">
+        <div class="label">Rendez-vous réels</div>
+        <div class="value">38</div>
+        <div class="sub">Moyenne par jour Q4</div>
+        <span class="badge badge-yellow">70% d'occupation</span>
+      </div>
+      <div class="hero-card">
+        <div class="label">RDV complétés (status 8)</div>
+        <div class="value" style="color:var(--red)">21</div>
+        <div class="sub">Moyenne par jour Q4</div>
+        <span class="badge badge-red">55% de complétion</span>
+      </div>
+    </div>
+    <table style="font-size:13px">
+      <thead>
+        <tr>
+          <th>Jour</th>
+          <th class="text-right">RDV total</th>
+          <th class="text-right">Complétés (#8)</th>
+          <th class="text-right">% complétion</th>
+          <th class="text-right">Minutes totales</th>
+          <th class="text-right">Revenu/heure</th>
+          <th class="text-right">Ratio MS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="bold">Lundi</td>
+          <td class="text-right">434</td>
+          <td class="text-right">244</td>
+          <td class="text-right">56%</td>
+          <td class="text-right mono">14 185</td>
+          <td class="text-right mono">&mdash;</td>
+          <td class="text-right mono">&mdash;</td>
+        </tr>
+        <tr style="background:var(--red-bg)">
+          <td class="bold text-red">Mardi</td>
+          <td class="text-right text-red bold">588</td>
+          <td class="text-right">312</td>
+          <td class="text-right">53%</td>
+          <td class="text-right mono">18 100</td>
+          <td class="text-right mono text-red bold">66.54$</td>
+          <td class="text-right mono text-red bold">65.1%</td>
+        </tr>
+        <tr>
+          <td class="bold">Mercredi</td>
+          <td class="text-right">509</td>
+          <td class="text-right">298</td>
+          <td class="text-right">59%</td>
+          <td class="text-right mono">15 430</td>
+          <td class="text-right mono">&mdash;</td>
+          <td class="text-right mono">&mdash;</td>
+        </tr>
+        <tr>
+          <td class="bold">Jeudi</td>
+          <td class="text-right">531</td>
+          <td class="text-right">284</td>
+          <td class="text-right">53%</td>
+          <td class="text-right mono">20 005</td>
+          <td class="text-right mono">&mdash;</td>
+          <td class="text-right mono">&mdash;</td>
+        </tr>
+        <tr style="background:var(--green-bg)">
+          <td class="bold text-green">Vendredi</td>
+          <td class="text-right">422</td>
+          <td class="text-right">234</td>
+          <td class="text-right">55%</td>
+          <td class="text-right mono">14 730</td>
+          <td class="text-right mono text-green bold">106.71$</td>
+          <td class="text-right mono text-green bold">38.0%</td><!-- ratio agrégé Q4; la moyenne des vendredis individuels = 43.8% -->
+        </tr>
+        <tr class="bold">
+          <td>Total Q4</td>
+          <td class="text-right">2 484</td>
+          <td class="text-right">1 372</td>
+          <td class="text-right">55%</td>
+          <td class="text-right mono">82 450</td>
+          <td class="text-right mono">80.87$</td>
+          <td class="text-right mono text-red">61.3%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout callout-red">
+      <strong>Le mardi est le problème numéro un&nbsp;:</strong>
+      C'est le jour avec le plus de rendez-vous (588) mais le pire revenu par heure (66.54$) et le pire ratio salarial (65.1%).
+      Le vendredi a <strong>28% moins de rendez-vous</strong> mais génère <strong>60% plus de revenu par heure</strong>.
+      Le mardi est sur-staffé par rapport à la valeur des actes programmés.
+    </div>
+  </div>
+
+  <!-- TEMPS NON-PRODUCTIF -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>34% du temps d'agenda ne génère aucun revenu</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      Sur les 1 120 heures programmées en Q4, 383 heures sont des créneaux sans acte vétérinaire facturable.
+      C'est l'équivalent de <strong>6 heures par jour</strong> de temps non-productif.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Type de créneau</th><th class="text-right">Nombre Q4</th><th class="text-right">Durée moy.</th><th class="text-right">Total heures</th><th class="text-right">% de l'agenda</th></tr>
+      </thead>
+      <tbody>
+        <tr style="background:var(--red-bg)">
+          <td class="bold">Bloqué (non-disponible)</td>
+          <td class="text-right">241</td>
+          <td class="text-right">60 min</td>
+          <td class="text-right mono text-red bold">241 h</td>
+          <td class="text-right text-red bold">21.5%</td>
+        </tr>
+        <tr>
+          <td>Messages / Notes admin</td>
+          <td class="text-right">267</td>
+          <td class="text-right">19 min</td>
+          <td class="text-right mono">82 h</td>
+          <td class="text-right">7.3%</td>
+        </tr>
+        <tr>
+          <td>Congé chirurgie (prép/récup)</td>
+          <td class="text-right">95</td>
+          <td class="text-right">21 min</td>
+          <td class="text-right mono">33 h</td>
+          <td class="text-right">2.9%</td>
+        </tr>
+        <tr>
+          <td>Entrée chirurgie (admission)</td>
+          <td class="text-right">97</td>
+          <td class="text-right">10 min</td>
+          <td class="text-right mono">16 h</td>
+          <td class="text-right">1.4%</td>
+        </tr>
+        <tr>
+          <td>Réunions</td>
+          <td class="text-right">9</td>
+          <td class="text-right">72 min</td>
+          <td class="text-right mono">11 h</td>
+          <td class="text-right">1.0%</td>
+        </tr>
+        <tr class="bold" style="background:var(--surface2)">
+          <td>TOTAL NON-PRODUCTIF</td>
+          <td class="text-right">709</td>
+          <td class="text-right">&mdash;</td>
+          <td class="text-right mono text-red">383 h</td>
+          <td class="text-right text-red">34.2%</td>
+        </tr>
+        <tr class="bold">
+          <td>Temps productif (consultations, chirurgies, tech)</td>
+          <td class="text-right">1 364</td>
+          <td class="text-right">&mdash;</td>
+          <td class="text-right mono text-green">737 h</td>
+          <td class="text-right text-green">65.8%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout callout-orange">
+      <strong>&laquo;&nbsp;Bloqué&nbsp;&raquo; est le plus gros levier&nbsp;:</strong>
+      241 heures bloquées dans l'agenda en Q4, c'est l'équivalent de <strong>~27 journées complètes de vétérinaire</strong> sans revenu (241h &divide; 9h/jour).
+      Chaque heure convertie en consultation génère ~220$ de revenu.
+      Si 50% des heures bloquées deviennent des consultations&nbsp;: <strong>+120h &times; 220$ = +26 400$ par trimestre</strong>.
+      <br><br>
+      Question pour la réunion&nbsp;: <em>À quoi servent exactement ces 241 créneaux bloqués? Tampon urgence? Pause? Admin? Peut-on en convertir la moitié?</em>
+    </div>
+  </div>
+
+  <!-- PRODUCTIVITE -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Productivité : 80.87$/h vs cible de 95$/h &mdash; écart de 15%</h3>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">Cible</div>
+        <div class="bar-track">
+          <div class="bar-fill green" style="width:95%">95.00 $/h</div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label bold">Actuel Q4</div>
+        <div class="bar-track">
+          <div class="bar-fill yellow" style="width:85%">80.87 $/h</div>
+          <div class="bar-target" style="left:95%"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label text-red">Mardi</div>
+        <div class="bar-track">
+          <div class="bar-fill red" style="width:70%">66.54 $/h</div>
+          <div class="bar-target" style="left:95%"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label text-green">Vendredi</div>
+        <div class="bar-track">
+          <div class="bar-fill green" style="width:100%">106.71 $/h</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-grid" style="margin-top:16px">
+      <div class="card">
+        <h3>Le calcul du manque à gagner</h3>
+        <p>Heures-staff totales Q4 (Agendrix)&nbsp;: <strong>~4 950 h</strong></p>
+        <p>À 80.87$/h (actuel)&nbsp;: <strong>~400 000$</strong> de revenu</p>
+        <p>À 95$/h (cible)&nbsp;: <strong>~470 000$</strong> de revenu</p>
+        <p class="text-red bold" style="font-size:16px;margin-top:8px">Manque à gagner : ~70 000$ par trimestre</p>
+        <p style="font-size:12px;color:var(--text2);margin-top:4px">80.87$/h = revenu par heure-staff (toute l'équipe), pas par heure d'agenda vet.</p>
+      </div>
+      <div class="card">
+        <h3>Les leviers pour y arriver</h3>
+        <ul style="list-style:none;padding:0;font-size:14px">
+          <li style="padding:6px 0;border-bottom:1px solid var(--border)"><strong class="text-green">+26K$</strong> &mdash; Convertir 50% des &laquo;Bloqué&raquo; en consultations</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border)"><strong class="text-green">+70K$/trim</strong> &mdash; Prébooking de 37% à 55% (plus de visites de retour par animal)</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border)"><strong class="text-green">+31$/visite</strong> &mdash; ATV de 189$ à 220$ (forfaits, suivis)</li>
+          <li style="padding:6px 0"><strong class="text-green">-40$/h mardi</strong> &mdash; Réduire la dotation le mardi OU y placer les chirurgies à haute valeur</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANNULATIONS ET DOCUMENTATION -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Annulations : le problème n'est pas le taux, c'est l'angle mort</h3>
+    <div class="card-grid">
+      <div class="card">
+        <h3 style="color:var(--orange)">~570 annulations en Q4</h3>
+        <p>Taux d'annulation : <strong>~23%</strong> des rendez-vous planifiés (~570 sur ~2 500)</p>
+        <p style="font-size:11px;color:var(--text2)">Source : EzyVet Cancelled Appointments export (oct 187 + nov 171 + déc 211 = 569). Dénominateur = complétés (1 391) + annulés + no-show.</p>
+        <p>C'est au-dessus du benchmark industrie de 15-20% (réf. VHMA), mais le vrai problème est ailleurs.</p>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--red)">60% sans raison documentée</h3>
+        <p>Sur les ~570 annulations, seulement <strong>~40% ont une raison codée</strong> dans EzyVet.</p>
+        <p>Sans raison, impossible d'agir. C'est un angle mort complet.</p>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--text2);margin-top:12px">
+      Raisons documentées quand elles existent&nbsp;: &laquo;&nbsp;Incorrect Entry&nbsp;&raquo; (erreur de saisie), &laquo;&nbsp;Owner's Request&nbsp;&raquo; (demande client), &laquo;&nbsp;Symptoms Subsiding&nbsp;&raquo; (symptômes résolus), décès, déplacement.
+      Beaucoup de &laquo;&nbsp;No Status&nbsp;&raquo; sans explication.
+    </p>
+    <div class="callout callout-orange">
+      <strong>Action TSA&nbsp;:</strong> À partir de février, chaque annulation doit avoir une raison sélectionnée dans EzyVet. Pas d'exception.
+      Objectif&nbsp;: passer de 40% à 95% de raisons documentées en 4 semaines. C'est la base pour réduire le taux d'annulation ensuite.
+    </div>
+  </div>
+
+  <!-- SYNTHESE DIAGNOSTIC -->
+  <div class="card card-full" style="background:var(--surface2)">
+    <h3 style="font-size:18px">Synthèse : où est l'argent perdu?</h3>
+    <table style="font-size:14px">
+      <thead><tr><th>Cause</th><th class="text-right">Impact estimé Q4</th><th>Difficulté</th><th>Qui</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="bold">Heures &laquo;Bloqué&raquo; non-productives</td>
+          <td class="text-right mono text-red bold">~26 000$/trim</td>
+          <td><span class="tag tag-med">MOYEN</span></td>
+          <td>Direction med.</td>
+        </tr>
+        <tr>
+          <td class="bold">Prébooking trop bas (37% vs 55%)</td>
+          <td class="text-right mono text-red bold">~70 000$/trim</td>
+          <td><span class="tag tag-crit">PROCESSUS</span></td>
+          <td>Audrée</td>
+        </tr>
+        <tr>
+          <td class="bold">Mardi sur-staffé / sous-productif</td>
+          <td class="text-right mono text-orange">~15 000$/trim</td>
+          <td><span class="tag tag-med">PLANIF</span></td>
+          <td>Nancy + Agendrix</td>
+        </tr>
+        <tr>
+          <td class="bold">ATV en baisse (189$ vs 220$)</td>
+          <td class="text-right mono text-orange">~24 000$/trim*</td>
+          <td><span class="tag tag-med">MEDICAL</span></td>
+          <td>Direction med.</td>
+        </tr>
+        <tr>
+          <td class="bold">Annulations sans raison (60%)</td>
+          <td class="text-right mono text-muted">Non mesurable</td>
+          <td><span class="tag tag-fix">FACILE</span></td>
+          <td>Équipe entière</td>
+        </tr>
+        <tr style="background:var(--surface);font-size:16px" class="bold">
+          <td>POTENTIEL DE RÉCUPÉRATION</td>
+          <td class="text-right mono text-green">~135 000$/trim</td>
+          <td colspan="2"></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--text2);margin-top:12px">
+      Ce sont des estimations conservatrices. *L'ATV à +31$/visite sur toutes les visites donnerait ~42K$/trim; 24K$ suppose ~55% des visites touchées. Le potentiel réel dépend de l'exécution.
+      Le message clé&nbsp;: la clinique <strong>n'a pas besoin de plus de patients</strong> &mdash; elle a besoin de mieux utiliser
+      les heures disponibles et de s'assurer que chaque patient revient.
+    </p>
+  </div>
+</div>
+
+<!-- ===================== SECTION 3B : KPIs EZYVET — LES PREUVES ===================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num purple">3b</div>
+    <div class="section-title">KPIs EzyVet &mdash; Les preuves jour par jour</div>
+  </div>
+
+  <p style="color:var(--text2);margin-bottom:20px;font-size:13px;">
+    Source&nbsp;: <span class="src-badge src-ezy">EZYVET</span> export quotidien par 23 catégories de revenu &middot;
+    <span class="src-badge src-agx">AGENDRIX</span> masse salariale quotidienne.
+    Chaque jour de Q4 a été analysé individuellement.
+  </p>
+
+  <!-- MARDI VS VENDREDI -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Le mardi coûte presque le double du vendredi en masse salariale &mdash; exemples Q4</h3>
+    <table style="font-size:13px">
+      <thead>
+        <tr><th>Date</th><th class="text-right">Revenu</th><th class="text-right">Masse sal.</th><th class="text-right">Ratio MS</th><th class="text-right">Marge</th></tr>
+      </thead>
+      <tbody>
+        <tr style="background:var(--red-bg)"><td colspan="5" class="bold text-red" style="font-size:12px;letter-spacing:1px">MARDIS Q4 &mdash; Moyenne : 6 355$/jour, masse sal. 4 133$, ratio 66.8%</td></tr><!-- ratio 66.8% = moyenne des ratios quotidiens individuels; le ratio agrégé (total MS / total rev.) = 65.1% en section 3 -->
+        <tr><td class="mono">7 oct</td><td class="text-right mono">5 162$</td><td class="text-right mono text-red">4 135$</td><td class="text-right mono text-red bold">80.1%</td><td class="text-right mono text-red">19.9%</td></tr>
+        <tr><td class="mono">4 nov</td><td class="text-right mono">6 543$</td><td class="text-right mono text-red">4 655$</td><td class="text-right mono text-red bold">71.1%</td><td class="text-right mono text-red">28.9%</td></tr>
+        <tr><td class="mono">11 nov</td><td class="text-right mono">5 613$</td><td class="text-right mono text-red">5 061$</td><td class="text-right mono text-red bold">90.2%</td><td class="text-right mono text-red">9.8%</td></tr>
+        <tr><td class="mono">18 nov</td><td class="text-right mono">8 246$</td><td class="text-right mono text-red">5 306$</td><td class="text-right mono text-red">64.3%</td><td class="text-right mono">35.7%</td></tr>
+        <tr><td class="mono">25 nov</td><td class="text-right mono">4 889$</td><td class="text-right mono text-red">3 593$</td><td class="text-right mono text-red bold">73.5%</td><td class="text-right mono text-red">26.5%</td></tr>
+        <tr><td class="mono">9 dec</td><td class="text-right mono">8 433$</td><td class="text-right mono text-red">5 080$</td><td class="text-right mono text-red">60.2%</td><td class="text-right mono">39.8%</td></tr>
+
+        <tr style="background:var(--green-bg)"><td colspan="5" class="bold text-green" style="font-size:12px;letter-spacing:1px">VENDREDIS Q4 &mdash; Moyenne : 5 729$/jour, masse sal. 2 177$, ratio 43.8%</td></tr>
+        <tr><td class="mono">17 oct</td><td class="text-right mono">6 120$</td><td class="text-right mono text-green">2 333$</td><td class="text-right mono text-green bold">38.1%</td><td class="text-right mono text-green">61.9%</td></tr>
+        <tr><td class="mono">7 nov</td><td class="text-right mono">8 263$</td><td class="text-right mono text-green">2 649$</td><td class="text-right mono text-green bold">32.1%</td><td class="text-right mono text-green">67.9%</td></tr>
+        <tr><td class="mono">14 nov</td><td class="text-right mono">9 485$</td><td class="text-right mono text-green">2 312$</td><td class="text-right mono text-green bold">24.4%</td><td class="text-right mono text-green">75.6%</td></tr>
+        <tr><td class="mono">19 dec</td><td class="text-right mono text-green bold">11 094$</td><td class="text-right mono text-green">2 257$</td><td class="text-right mono text-green bold">20.3%</td><td class="text-right mono text-green bold">79.7%</td></tr>
+      </tbody>
+    </table>
+    <div class="card-grid" style="margin-top:16px">
+      <div class="card" style="border-left:3px solid var(--red)">
+        <h3>Mardi moyen</h3>
+        <p>Revenu&nbsp;: <strong>6 355$</strong></p>
+        <p>Masse sal.&nbsp;: <strong class="text-red">4 133$</strong></p>
+        <p>Contribution nette&nbsp;: <strong>2 222$</strong></p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--green)">
+        <h3>Vendredi moyen</h3>
+        <p>Revenu&nbsp;: <strong>5 729$</strong> (-10%)</p>
+        <p>Masse sal.&nbsp;: <strong class="text-green">2 177$</strong> (-47%)</p>
+        <p>Contribution nette&nbsp;: <strong class="text-green">3 552$</strong> (+60%)</p>
+      </div>
+    </div>
+    <div class="callout callout-red">
+      <strong>Le vendredi génère 60% plus de contribution nette avec 10% moins de revenu.</strong>
+      La différence&nbsp;: la masse salariale du mardi est <strong>1.9&times; celle du vendredi</strong> (4 133$ vs 2 177$).
+      C'est 45% des heures de gestion qui tombent le mardi (inventaire, réunions, gestion).
+      Chaque mardi a un ratio au-dessus de 60%. <strong>Aucun mardi de Q4 n'a atteint la cible de 45%.</strong>
+    </div>
+  </div>
+
+  <!-- CHIRURGIE = PROFIT -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>La chirurgie fait la différence entre un jour à 4K$ et un jour à 11K$</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      Les consultations plafonnent à ~2 000$/jour. Pour dépasser 8 000$, il faut des chirurgies, du labo, et des procédures.
+    </p>
+    <table style="font-size:13px">
+      <thead><tr><th>Date</th><th>Jour</th><th class="text-right">Revenu total</th><th class="text-right">Chirurgies</th><th class="text-right">Consult.</th><th class="text-right">Labo</th><th class="text-right">Ratio MO</th></tr></thead>
+      <tbody>
+        <tr style="background:var(--green-bg)">
+          <td class="mono bold">19 dec</td><td class="text-green bold">Vendredi</td><td class="text-right mono bold">11 094$</td><td class="text-right mono text-green bold">4 800$</td><td class="text-right mono">1 107$</td><td class="text-right mono">926$</td><td class="text-right mono text-green bold">20.3%</td>
+        </tr>
+        <tr style="background:var(--green-bg)">
+          <td class="mono bold">23 oct</td><td class="text-green">Jeudi</td><td class="text-right mono bold">11 528$</td><td class="text-right mono text-muted">0$</td><td class="text-right mono">1 942$</td><td class="text-right mono">1 119$</td><td class="text-right mono text-green">37.2%</td>
+        </tr>
+        <tr>
+          <td class="mono">14 nov</td><td>Vendredi</td><td class="text-right mono">9 485$</td><td class="text-right mono text-muted">0$</td><td class="text-right mono">1 948$</td><td class="text-right mono">1 133$</td><td class="text-right mono text-green">24.4%</td>
+        </tr>
+        <tr><td colspan="7" style="border:0;padding:4px"></td></tr>
+        <tr style="background:var(--red-bg)">
+          <td class="mono">11 dec</td><td class="text-red">Jeudi</td><td class="text-right mono text-red">4 097$</td><td class="text-right mono text-muted">0$</td><td class="text-right mono">491$</td><td class="text-right mono">382$</td><td class="text-right mono text-red bold">98.3%</td>
+        </tr>
+        <tr style="background:var(--red-bg)">
+          <td class="mono">27 oct</td><td class="text-red">Lundi</td><td class="text-right mono text-red">1 977$</td><td class="text-right mono text-muted">0$</td><td class="text-right mono">789$</td><td class="text-right mono">39$</td><td class="text-right mono text-red bold">88.3%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout callout-green">
+      <strong>Le 19 décembre = meilleur jour de l'année.</strong> 11 094$ de revenu, ratio de 20.3%.
+      La raison&nbsp;: <strong>4 800$ en chirurgies</strong>. Ce seul bloc chirurgical a généré
+      plus de revenu que beaucoup de journées complètes. <em>Chaque journée de chirurgie supplémentaire est un levier direct sur la rentabilité.</em>
+    </div>
+  </div>
+
+  <!-- CATEGORIES DE REVENU -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Les 23 catégories de revenu EzyVet &mdash; où va l'argent?</h3>
+    <table style="font-size:13px">
+      <thead><tr><th>Catégorie</th><th class="text-right">Moy./jour</th><th class="text-right">Estimation Q4</th><th class="text-right">% du total</th><th>Levier</th></tr></thead>
+      <tbody>
+        <tr class="bold"><td>Consultation / Examen</td><td class="text-right mono">1 400$</td><td class="text-right mono">91 000$</td><td class="text-right">22%</td><td><span class="tag tag-med">STABLE</span></td></tr>
+        <tr><td>Pharmacie</td><td class="text-right mono">800$</td><td class="text-right mono">52 000$</td><td class="text-right">13%</td><td><span class="tag tag-med">STABLE</span></td></tr>
+        <tr><td>Laboratoire interne</td><td class="text-right mono">650$</td><td class="text-right mono">42 000$</td><td class="text-right">10%</td><td><span class="tag tag-fix">RECOMMANDATIONS</span></td></tr>
+        <tr><td>Alimentation</td><td class="text-right mono">550$</td><td class="text-right mono">36 000$</td><td class="text-right">9%</td><td><span class="tag tag-fix">MARGE 71-210%</span></td></tr>
+        <tr><td>Vaccination</td><td class="text-right mono">350$</td><td class="text-right mono">23 000$</td><td class="text-right">6%</td><td><span class="tag tag-med">SAISONNIER</span></td></tr>
+        <tr><td>Procédures / Radio / Laser</td><td class="text-right mono">400$</td><td class="text-right mono">26 000$</td><td class="text-right">6%</td><td><span class="tag tag-fix">À AUGMENTER</span></td></tr>
+        <tr class="bold" style="background:var(--green-bg)"><td>Chirurgie</td><td class="text-right mono">variable</td><td class="text-right mono">~30 000$</td><td class="text-right">7%</td><td><span class="tag tag-crit">LEVIER #1</span></td></tr>
+        <tr><td>&laquo;&nbsp;Services&nbsp;&raquo; (forfaits, suivis)</td><td class="text-right mono">0-4 634$</td><td class="text-right mono">~65 000$</td><td class="text-right">16%</td><td><span class="tag tag-crit">TRÈS VARIABLE</span></td></tr>
+        <tr><td>Euthanasie / Crémation</td><td class="text-right mono">350$</td><td class="text-right mono">23 000$</td><td class="text-right">6%</td><td class="text-muted">N/A</td></tr>
+        <tr><td>Produits clinique + Suppléments</td><td class="text-right mono">200$</td><td class="text-right mono">13 000$</td><td class="text-right">3%</td><td><span class="tag tag-fix">RECOMMANDATIONS</span></td></tr>
+      </tbody>
+    </table>
+    <div class="callout callout-green">
+      <strong>Deux leviers de revenu immédiats&nbsp;:</strong>
+      (1) <strong>Chirurgies</strong> &mdash; chaque bloc chirurgical additionnel génère 2 000$-4 800$ de revenu concentré.
+      Programmer 1 journée de chirurgie de plus par semaine = potentiel +8 000$ à 12 000$/mois.
+      (2) <strong>Labo interne</strong> &mdash; chaque consultation devrait systématiquement inclure des analyses recommandées.
+      Le labo a une marge très élevée et est sous-prescrit les jours à faible revenu.
+    </div>
+  </div>
+
+  <!-- PRÉBOOKING CRASH -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Le prébooking a chuté de 52% à 37% en un mois</h3>
+    <div class="card-grid">
+      <div class="card" style="border-left:3px solid var(--green)">
+        <h3>Oct à mi-jan (référence)</h3>
+        <p style="font-size:28px;font-weight:700;color:var(--green)">52%</p>
+        <p>1 391 RDV complétés &middot; 851 animaux uniques</p>
+        <p>724 RDV complétés avaient un prébooking</p>
+        <p>1.63 visites par animal en moyenne</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--red)">
+        <h3>Janvier 12-24</h3>
+        <p style="font-size:28px;font-weight:700;color:var(--red)">37%</p>
+        <p>Chute de 15 points en un mois</p>
+        <p>2e semaine à 34%</p>
+        <p>Jan 22&nbsp;: 17.6% (plus bas)</p>
+      </div>
+    </div>
+    <div class="callout callout-red">
+      <strong>C'est la dégradation la plus rapide de tous les KPIs.</strong>
+      En Q4, la clinique avait un prébooking de 52% (excellent vs benchmark industrie de 30%, réf. AAHA).
+      En 4 semaines, il a chuté à 37%. Quelque chose a changé dans le processus de sortie patient.
+      <em>À investiguer cette semaine&nbsp;: qui fait la sortie patient? Le processus a-t-il changé en janvier?</em>
+    </div>
+  </div>
+
+  <!-- CLIENT BASE -->
+  <div class="card card-full">
+    <h3>Base clients : 851 animaux uniques, 1.63 visites chacun</h3>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Ce que les données client révèlent</h3>
+        <ul style="list-style:none;padding:0;font-size:14px">
+          <li style="padding:6px 0;border-bottom:1px solid var(--border)"><strong>851 animaux uniques</strong> vus en 3.5 mois (oct-jan)</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border)"><strong>1.63 visites/animal</strong> &mdash; rétention correcte</li>
+          <li style="padding:6px 0;border-bottom:1px solid var(--border)"><strong>2 515 rendez-vous planifiés</strong> dont 1 391 complétés (55%)</li>
+          <li style="padding:6px 0"><strong>174$ panier moyen clinique</strong> (EzyVet annuel)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Le calcul de la valeur client</h3>
+        <p>851 animaux &times; 174$/visite &times; 1.63 visites = <strong>241 000$</strong> par cycle</p>
+        <p style="margin-top:8px">Si prébooking à 55%&nbsp;: 1.63 &rarr; ~2.1 visites/animal</p>
+        <p>851 &times; 174$ &times; 2.1 = <strong>311 000$</strong></p>
+        <p class="text-green bold" style="font-size:16px;margin-top:8px">+70 000$/trimestre juste en augmentant le prébooking</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 3C : ANALYSES APPROFONDIES ===================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num purple">3c</div>
+    <div class="section-title">Analyses approfondies &mdash; Données EzyVet détaillées</div>
+  </div>
+
+  <p style="color:var(--text2);margin-bottom:20px;font-size:13px;">
+    Sources&nbsp;: <span class="src-badge src-ezy">EZYVET</span> exports détaillés (Invoice Lines, Cancelled Appointments, Staff Sales) &middot;
+    <span class="src-badge src-kpi">CSV CONSOLIDÉ</span> analyse quotidienne Q4.
+    Ces analyses complètent le diagnostic de la Section 3.
+  </p>
+
+  <!-- 1. RATIO MS PAR JOUR DE SEMAINE -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Le mardi n'est pas le seul problème &mdash; Ratio MS par jour de semaine</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      L'analyse de chaque jour de Q4 révèle que <strong>tous les jours sauf le vendredi</strong> dépassent la cible de 45%.
+      Le mardi est le pire, mais lundi, mercredi et jeudi sont aussi au-dessus.
+    </p>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label text-green bold">Vendredi</div>
+        <div class="bar-track">
+          <div class="bar-fill green" style="width:38%">38.0%</div>
+          <div class="bar-target" style="left:45%"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Lundi</div>
+        <div class="bar-track">
+          <div class="bar-fill yellow" style="width:50.5%">50.5%</div>
+          <div class="bar-target" style="left:45%"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Jeudi</div>
+        <div class="bar-track">
+          <div class="bar-fill yellow" style="width:51.4%">51.4%</div>
+          <div class="bar-target" style="left:45%"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Mercredi</div>
+        <div class="bar-track">
+          <div class="bar-fill yellow" style="width:51.9%">51.9%</div>
+          <div class="bar-target" style="left:45%"></div>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label text-red bold">Mardi</div>
+        <div class="bar-track">
+          <div class="bar-fill red" style="width:65.1%">65.1%</div>
+          <div class="bar-target" style="left:45%"></div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:var(--text2)">Ligne blanche = cible 45%. Source&nbsp;: CSV Consolidé quotidien Q4 (revenu EzyVet + masse salariale Agendrix brut + 14% charges).</p>
+    <div class="callout callout-orange">
+      <strong>Implication&nbsp;:</strong> L'optimisation du mardi est prioritaire (écart de 20 pts), mais les lundis, mercredis et jeudis ont aussi 5-7 pts d'excédent.
+      Après le mardi, le prochain levier est de <strong>ramener lundi-mercredi-jeudi sous 48%</strong> via un ajustement de dotation.
+    </div>
+  </div>
+
+  <!-- 2. LIGNES DE FACTURE PAR VET -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Profil de facturation par vétérinaire &mdash; 15 528 lignes analysées</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      Chaque facture contient plusieurs lignes (consultation, labo, médicaments, etc.).
+      Le nombre de lignes par facture reflète l'exhaustivité des actes recommandés.
+    </p>
+    <table style="font-size:13px">
+      <thead>
+        <tr><th>Vétérinaire</th><th class="text-right">Factures</th><th class="text-right">Lignes</th><th class="text-right">Lignes/facture</th><th class="text-right">$/ligne</th><th class="text-right">Lignes labo</th><th class="text-right">Lignes chx</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="bold">Dre Cockburn</td>
+          <td class="text-right">489</td>
+          <td class="text-right">2 538</td>
+          <td class="text-right mono bold">5.19</td>
+          <td class="text-right mono">61.69$</td>
+          <td class="text-right mono text-green bold">230</td>
+          <td class="text-right mono text-muted">~0</td>
+        </tr>
+        <tr style="background:var(--green-bg)">
+          <td class="bold text-green">Dre Cohen</td>
+          <td class="text-right">476</td>
+          <td class="text-right">3 446</td>
+          <td class="text-right mono text-green bold">7.24</td>
+          <td class="text-right mono">34.44$</td>
+          <td class="text-right mono text-red">101</td>
+          <td class="text-right mono">37</td>
+        </tr>
+        <tr>
+          <td class="bold">Dre Brazeau</td>
+          <td class="text-right">231</td>
+          <td class="text-right">1 465</td>
+          <td class="text-right mono bold">6.34</td>
+          <td class="text-right mono">41.54$</td>
+          <td class="text-right mono">~150</td>
+          <td class="text-right mono text-green bold">63</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="card-grid" style="margin-top:16px">
+      <div class="card" style="border-left:3px solid var(--accent)">
+        <h3>Ce que ça révèle</h3>
+        <p><strong>Dre Cohen</strong> a le plus de lignes/facture (7.24) mais le plus bas $/ligne (34$). Elle prescrit beaucoup d'actes à faible valeur.</p>
+        <p style="margin-top:6px"><strong>Dre Cockburn</strong> a 5.19 lignes/facture mais à 62$/ligne &mdash; elle prescrit moins d'actes, mais de plus haute valeur.</p>
+        <p style="margin-top:6px"><strong>Dre Brazeau</strong> mène en chirurgie (63 lignes, 43K$) &mdash; c'est elle qui tire le revenu chirurgical.</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--red)">
+        <h3>Signal d'alerte &mdash; Labo sous-prescrit</h3>
+        <p>Dre Cockburn prescrit <strong>230 lignes de labo</strong> vs seulement <strong>101 pour Dre Cohen</strong>.</p>
+        <p style="margin-top:6px">Le labo interne génère <strong>110.75$/ligne</strong> (voir ci-dessous). C'est le segment le plus rentable après la chirurgie.</p>
+        <p style="margin-top:6px" class="text-green bold">Si Dre Cohen prescrit autant de labo que Cockburn&nbsp;: +129 lignes &times; 111$ = +14 300$/trim</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. CATÉGORIES PAR $/LIGNE -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Chirurgies = 1% des lignes mais 16% du revenu</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      Sur 15 528 lignes de facture, les chirurgies ne représentent que 163 lignes &mdash; mais avec un revenu moyen de <strong>681.67$/ligne</strong>,
+      elles génèrent une part disproportionnée du chiffre d'affaires.
+    </p>
+    <table style="font-size:13px">
+      <thead><tr><th>Catégorie</th><th class="text-right">Lignes</th><th class="text-right">% lignes</th><th class="text-right">$/ligne moy.</th><th class="text-right">Revenu estimé</th><th class="text-right">% revenu</th></tr></thead>
+      <tbody>
+        <tr style="background:var(--green-bg)">
+          <td class="bold text-green">Chirurgies</td>
+          <td class="text-right">163</td>
+          <td class="text-right">1.0%</td>
+          <td class="text-right mono text-green bold">681.67$</td>
+          <td class="text-right mono text-green bold">~111 100$</td>
+          <td class="text-right text-green bold">16%</td>
+        </tr>
+        <tr>
+          <td class="bold">Labo interne</td>
+          <td class="text-right">~580</td>
+          <td class="text-right">3.7%</td>
+          <td class="text-right mono bold">110.75$</td>
+          <td class="text-right mono">~64 200$</td>
+          <td class="text-right">9%</td>
+        </tr>
+        <tr>
+          <td>Consultation / Examen</td>
+          <td class="text-right">~2 100</td>
+          <td class="text-right">13.5%</td>
+          <td class="text-right mono">62.50$</td>
+          <td class="text-right mono">~131 000$</td>
+          <td class="text-right">19%</td>
+        </tr>
+        <tr>
+          <td>Médicaments / Pharmacie</td>
+          <td class="text-right">~6 800</td>
+          <td class="text-right">43.8%</td>
+          <td class="text-right mono">14.97$</td>
+          <td class="text-right mono">~101 800$</td>
+          <td class="text-right">15%</td>
+        </tr>
+        <tr>
+          <td class="text-muted">Autres (alimentation, produits, etc.)</td>
+          <td class="text-right text-muted">~5 900</td>
+          <td class="text-right text-muted">38.0%</td>
+          <td class="text-right mono text-muted">variable</td>
+          <td class="text-right mono text-muted">~280 000$</td>
+          <td class="text-right text-muted">41%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout callout-green">
+      <strong>La chirurgie est le levier de revenu le plus puissant</strong>&nbsp;: 681$/ligne vs 15$/ligne pour les médicaments.
+      Chaque chirurgie additionnelle a l'effet de <strong>45 prescriptions de médicaments</strong>.
+      Dre Brazeau est la principale source de chirurgies (63 lignes, 43K$) &mdash; sa montée en puissance est un atout stratégique.
+    </div>
+  </div>
+
+  <!-- 4. ANNULATIONS PAR JOUR DE SEMAINE -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Annulations par jour de semaine &mdash; Le mercredi est le pire jour</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      Contrairement à l'intuition, ce n'est pas le mardi qui a le plus d'annulations. C'est le <strong>mercredi</strong>.
+    </p>
+    <table style="font-size:13px">
+      <thead><tr><th>Jour</th><th class="text-right">Annulations</th><th class="text-right">% du total</th><th class="text-right">% sans raison</th><th>Signal</th></tr></thead>
+      <tbody>
+        <tr style="background:var(--red-bg)">
+          <td class="bold text-red">Mercredi</td>
+          <td class="text-right text-red bold">150</td>
+          <td class="text-right text-red bold">23%</td>
+          <td class="text-right text-red bold">70%</td>
+          <td><span class="tag tag-crit">PIRE JOUR</span></td>
+        </tr>
+        <tr>
+          <td class="bold">Mardi</td>
+          <td class="text-right">128</td>
+          <td class="text-right">20%</td>
+          <td class="text-right">58%</td>
+          <td><span class="tag tag-med">ÉLEVÉ</span></td>
+        </tr>
+        <tr>
+          <td class="bold">Jeudi</td>
+          <td class="text-right">127</td>
+          <td class="text-right">19%</td>
+          <td class="text-right">56%</td>
+          <td class="text-muted">Moyen</td>
+        </tr>
+        <tr>
+          <td>Lundi</td>
+          <td class="text-right">125</td>
+          <td class="text-right">19%</td>
+          <td class="text-right">59%</td>
+          <td class="text-muted">Moyen</td>
+        </tr>
+        <tr style="background:var(--green-bg)">
+          <td class="bold text-green">Vendredi</td>
+          <td class="text-right text-green">125</td>
+          <td class="text-right text-green">19%</td>
+          <td class="text-right text-green">52%</td>
+          <td><span class="tag tag-fix">MEILLEUR</span></td>
+        </tr>
+        <tr class="bold" style="background:var(--surface2)">
+          <td>TOTAL Q4 + Jan 1-15</td>
+          <td class="text-right">655</td>
+          <td class="text-right">100%</td>
+          <td class="text-right text-red">60%</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="card-grid" style="margin-top:16px">
+      <div class="card" style="border-left:3px solid var(--red)">
+        <h3>Le mercredi : 70% non documenté</h3>
+        <p>150 annulations, dont <strong>70% sans aucune raison</strong> dans EzyVet. C'est l'angle mort le plus important.</p>
+        <p style="margin-top:6px">Le jeudi a un problème différent&nbsp;: <strong>19% &laquo;&nbsp;Incorrect Entry&nbsp;&raquo;</strong> &mdash; ce sont des erreurs de saisie dans l'agenda, pas de vraies annulations.</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--orange)">
+        <h3>Tendance mensuelle</h3>
+        <p>Oct&nbsp;: 187 &middot; Nov&nbsp;: 171 &middot; Déc&nbsp;: 211 &middot; Jan 1-15&nbsp;: 86</p>
+        <p style="margin-top:6px">Décembre a le plus d'annulations (211). Janvier est en rythme comparable (~172/mois projeté).</p>
+        <p style="margin-top:6px" class="text-muted">Les annulations augmentent avec le volume &mdash; le taux est plus informatif que le nombre absolu.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. REVENU PAR HEURE -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Le matin (8h-9h) génère 25% du revenu de la journée</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      L'analyse des Staff Sales par heure montre une distribution très inégale du revenu durant la journée.
+    </p>
+    <table style="font-size:13px">
+      <thead><tr><th>Plage horaire</th><th class="text-right">% du revenu</th><th class="text-right">$/facture moy.</th><th>Observation</th></tr></thead>
+      <tbody>
+        <tr style="background:var(--green-bg)">
+          <td class="bold text-green">8h - 9h</td>
+          <td class="text-right text-green bold">~25%</td>
+          <td class="text-right mono text-green bold">272$</td>
+          <td>Meilleure heure &mdash; chirurgies matinales + consultations à haute valeur</td>
+        </tr>
+        <tr>
+          <td>9h - 10h</td>
+          <td class="text-right">~12%</td>
+          <td class="text-right mono">187$</td>
+          <td>Forte activité, bonne valeur</td>
+        </tr>
+        <tr style="background:var(--red-bg)">
+          <td class="text-red">10h - 11h</td>
+          <td class="text-right text-red">~8%</td>
+          <td class="text-right mono text-red">122$</td>
+          <td>Creux de milieu de matinée &mdash; consultations simples</td>
+        </tr>
+        <tr>
+          <td>11h - 12h</td>
+          <td class="text-right">~9%</td>
+          <td class="text-right mono">148$</td>
+          <td>Remontée avant le lunch</td>
+        </tr>
+        <tr>
+          <td class="bold">13h - 14h</td>
+          <td class="text-right bold">~14%</td>
+          <td class="text-right mono bold">174$</td>
+          <td>2e meilleure plage &mdash; reprise post-lunch</td>
+        </tr>
+        <tr>
+          <td>14h - 16h</td>
+          <td class="text-right">~22%</td>
+          <td class="text-right mono">145$</td>
+          <td>Volume soutenu, valeur moyenne</td>
+        </tr>
+        <tr style="background:var(--red-bg)">
+          <td class="text-red">Après 17h</td>
+          <td class="text-right text-red">~6%</td>
+          <td class="text-right mono text-red">72-125$</td>
+          <td>Fin de journée &mdash; actes à faible valeur, urgences mineures</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout callout-green">
+      <strong>Le créneau 8h-9h est l'heure en or de la clinique.</strong>
+      272$/facture en moyenne vs 122$ à 10h &mdash; c'est 2.2&times; plus rentable.
+      <br><br>
+      <strong>Implication pour la dotation&nbsp;:</strong> L'équipe complète doit être prête et opérationnelle dès 8h00.
+      Tout retard au démarrage (préparation, réunions matinales) réduit directement la plage la plus rentable.
+      Les actes à haute valeur (chirurgies, procédures, bilans complets) doivent être programmés le matin.
+    </div>
+  </div>
+
+  <!-- 6. HEURES BLOQUÉES PAR RESSOURCE -->
+  <div class="card card-full">
+    <h3>Les 241 heures &laquo;&nbsp;Bloqué&nbsp;&raquo; &mdash; un problème systémique, pas individuel</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      Analyse des créneaux &laquo;&nbsp;Bloqué&nbsp;&raquo; par ressource pour comprendre qui bloque et pourquoi.
+    </p>
+    <table style="font-size:13px">
+      <thead><tr><th>Ressource</th><th class="text-right">Blocs</th><th class="text-right">% du total</th><th>Raisons typiques</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="bold">Dre Cockburn</td>
+          <td class="text-right">~53</td>
+          <td class="text-right">30%</td>
+          <td class="text-muted" style="font-size:12px">Décalages de début de journée, blocs admin, récupération post-chirurgie</td>
+        </tr>
+        <tr>
+          <td class="bold">Technicienne</td>
+          <td class="text-right">~49</td>
+          <td class="text-right">28%</td>
+          <td class="text-muted" style="font-size:12px">Réserves pour urgences, préparation de salle</td>
+        </tr>
+        <tr>
+          <td class="bold">Dre Brazeau</td>
+          <td class="text-right">~48</td>
+          <td class="text-right">27%</td>
+          <td class="text-muted" style="font-size:12px">Intégration (normal pour un nouveau vet), formations</td>
+        </tr>
+        <tr>
+          <td class="bold">Dre Cohen</td>
+          <td class="text-right">~27</td>
+          <td class="text-right">15%</td>
+          <td class="text-muted" style="font-size:12px">Blocs admin ponctuels</td>
+        </tr>
+        <tr class="bold" style="background:var(--surface2)">
+          <td>TOTAL</td>
+          <td class="text-right">177 analysés / 241</td>
+          <td class="text-right">100%</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout callout-orange">
+      <strong>Ce n'est pas une question de personne &mdash; c'est un problème de processus.</strong>
+      Les blocs sont distribués entre toutes les ressources (30% / 28% / 27% / 15%).
+      Les raisons sont systémiques&nbsp;: arrivées tardives, réserves urgences, récupération chirurgicale, admin.
+      <br><br>
+      <strong>Action&nbsp;:</strong> Auditer chaque type de bloc pour déterminer&nbsp;:
+      (a) lesquels sont nécessaires (ex&nbsp;: récupération post-chirurgie),
+      (b) lesquels peuvent être réduits (ex&nbsp;: admin déplacé en fin de journée),
+      (c) lesquels peuvent devenir des consultations (ex&nbsp;: réserves urgences non utilisées &rarr; ouvrir à 14h si non réclamées).
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 4 : PROBLEMES ===================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num red">4</div>
+    <div class="section-title">Ce qui doit changer</div>
+  </div>
+
+  <div class="problem-card sev-high">
+    <div class="problem-title">Le ratio masse salariale est hors contrôle <span class="tag tag-crit">Priorité 1</span></div>
+    <div class="problem-detail">
+      Sur chaque dollar de revenu, 61 cents vont aux salaires (Q4). La cible de l'industrie est 45 cents ou moins.
+      La clinique dépense 16 cents de trop par dollar &mdash; sur 414K$ de revenu, ça représente <strong>~67 000$ de surplus salarial</strong> au Q4.
+      <br><br>
+      En janvier, le ratio opérationnel à 57% est en amélioration, mais reste 12 points au-dessus de la cible.
+    </div>
+  </div>
+
+  <div class="problem-card sev-high">
+    <div class="problem-title">Décembre : 105K$ de salaires &mdash; +67% vs la normale <span class="tag tag-crit">À expliquer</span></div>
+    <div class="problem-detail">
+      Les salaires de décembre (104 889$) sont 67% au-dessus de la moyenne mensuelle (~63K$).
+      Les causes probables&nbsp;: paiement de vacances accumulées, bonus de fin d'année, ajustements rétroactifs.
+      La reconnaissance (4 159$) est aussi à son plus haut de l'année. À confirmer avec le comptable.
+    </div>
+    <div class="problem-impact">Décembre seul génère une perte de 73 550$. C'est la moitié de la perte du trimestre.</div>
+  </div>
+
+  <div class="problem-card sev-high">
+    <div class="problem-title">Le prébooking est trop bas pour assurer la croissance <span class="tag tag-crit">Priorité 2</span></div>
+    <div class="problem-detail">
+      En janvier, seulement 37% des patients partent avec un prochain rendez-vous (cible&nbsp;: 55%+).
+      En 2e semaine, c'est tombé à 34%. Les jours les plus faibles (17-23% les 21-22 jan) montrent un problème de processus à la sortie patient.
+      <br><br>
+      Un prébooking bas signifie plus d'efforts pour remplir l'agenda, plus de trous, et moins de revenus prévisibles.
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <div class="problem-card sev-med">
+    <div class="problem-title">Nos rapports internes sous-estiment les coûts de 46K$ <span class="tag tag-med">Données</span></div>
+    <div class="problem-detail">
+      Les tableaux de bord actuels utilisent les données Agendrix (heures travaillées) pour estimer la masse salariale.
+      Mais Agendrix ne capture pas les bonus, les vacances, la reconnaissance, ni les salaires admin.
+      Résultat&nbsp;: nos rapports montrent un ratio MS de 55% alors que la réalité comptable est 61%.
+    </div>
+    <table style="margin-top:12px;font-size:13px">
+      <thead><tr><th>Mois</th><th class="text-right">Réalité (ER)</th><th class="text-right">Nos rapports</th><th class="text-right">Écart</th></tr></thead>
+      <tbody>
+        <tr><td>Oct</td><td class="text-right mono">71 942$</td><td class="text-right mono">72 146$</td><td class="text-right mono text-green">~OK</td></tr>
+        <tr><td>Nov</td><td class="text-right mono">79 730$</td><td class="text-right mono">70 415$</td><td class="text-right mono text-red">-9 315$</td></tr>
+        <tr><td>Dec</td><td class="text-right mono">124 884$</td><td class="text-right mono">87 741$</td><td class="text-right mono text-red">-37 143$</td></tr>
+        <tr class="bold"><td>Q4</td><td class="text-right mono">276 556$</td><td class="text-right mono">230 302$</td><td class="text-right mono text-red">-46 254$</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="problem-card sev-fix">
+    <div class="problem-title">Rapports weekend et streak gamification <span class="tag tag-fix">Déjà corrigé</span></div>
+    <div class="problem-detail">
+      Le système générait des rapports à 0$ les weekends (clinique fermée). Corrigé&nbsp;: les rapports ne roulent plus que du lundi au vendredi. La série de jours consécutifs (streak) tient compte des weekends.
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 5 : PLAN D'ACTION — EXTREME OWNERSHIP ===================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num green">5</div>
+    <div class="section-title">Plan d'action &mdash; Extreme Ownership</div>
+  </div>
+
+  <div class="callout" style="border-left:3px solid var(--accent);margin-bottom:32px;font-size:14px;line-height:1.8">
+    <strong>&laquo;&nbsp;There are no bad teams, only bad leaders.&nbsp;&raquo;</strong> &mdash; Jocko Willink<br>
+    L'équipe n'est pas le problème. Le système est le problème. On ne blâme personne &mdash; on prend la responsabilité et on change le système.
+    <br><br>
+    <strong>Trois principes pour ce plan&nbsp;:</strong><br>
+    1. <strong>Prioritize and Execute</strong> &mdash; UNE seule priorité à la fois. Pas de listes de 15 items.<br>
+    2. <strong>Decentralized Command</strong> &mdash; Chaque action a UN propriétaire avec pleine autorité.<br>
+    3. <strong>Discipline Equals Freedom</strong> &mdash; Les processus stricts créent les résultats prévisibles.
+  </div>
+
+  <!-- ===== PRIORITÉ #1 ===== -->
+  <div style="background:var(--surface);border:2px solid var(--red);border-radius:16px;padding:28px;margin-bottom:24px">
+    <h3 style="color:var(--red);margin-bottom:4px;font-size:18px">PRIORITÉ #1 &mdash; Rebâtir le prébooking</h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:16px">&laquo;&nbsp;Prioritize and Execute&nbsp;&raquo; &mdash; On ne fait rien d'autre tant que ce n'est pas réglé.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Le problème</h3>
+        <p>Le prébooking est passé de <strong>52% à 37%</strong> en un mois.</p>
+        <p>Chaque point perdu = <strong>~4 700$/trimestre</strong> de revenu manqué.</p>
+        <p>15 points perdus = <strong>~70 000$/trimestre</strong> de manque à gagner.</p>
+      </div>
+      <div class="card">
+        <h3>La règle &mdash; zéro exception</h3>
+        <p><strong>Aucun patient ne quitte sans&nbsp;:</strong></p>
+        <p>A) Un prochain rendez-vous dans EzyVet, OU</p>
+        <p>B) Un code de raison &laquo;&nbsp;pas de prebook&nbsp;&raquo; dans le dossier</p>
+        <p style="margin-top:8px" class="text-muted">Pas de troisième option. C'est un processus, pas un choix.</p>
+      </div>
+    </div>
+
+    <table style="font-size:13px;margin-top:12px">
+      <thead><tr><th>Action</th><th>Propriétaire</th><th>Mesure</th><th>Échéance</th></tr></thead>
+      <tbody>
+        <tr><td class="bold">Script de sortie patient : &laquo;&nbsp;On planifie votre prochain rendez-vous?&nbsp;&raquo;</td><td>Audrée</td><td>Taux prébooking quotidien</td><td>Lundi 3 février</td></tr>
+        <tr><td>Afficher le taux de prébooking du jour dans l'aire de travail</td><td>Direction</td><td>Visible par tous</td><td>Lundi 3 février</td></tr>
+        <tr><td>Revue quotidienne à 17h : combien de patients sont partis sans prebook?</td><td>Audrée</td><td>0 patient sans code</td><td>Chaque jour</td></tr>
+        <tr><td class="bold">Objectif semaine 1 : 45%. Semaine 2 : 50%. Semaine 4 : 55%.</td><td>Audrée</td><td>KPI quotidien</td><td>28 février</td></tr>
+      </tbody>
+    </table>
+    <div class="sol-meta" style="margin-top:12px"><span style="background:var(--red-bg);color:var(--red)">Impact : +70 000$/trim</span><span>Coût : 0$ &mdash; c'est un changement de processus</span></div>
+
+    <!-- SCRIPTS & MINDSET PREBOOK -->
+    <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border)">
+      <h3 style="margin-bottom:12px">Le mindset : Forward booking = service client, pas vente</h3>
+      <div style="background:var(--surface2);border-radius:12px;padding:16px;margin-bottom:16px;font-size:14px">
+        <p style="margin-bottom:8px"><strong>Le constat industrie</strong>&nbsp;: Seulement <strong>5% des cliniques vétérinaires</strong> utilisent systématiquement le forward booking. Les dentistes sont à <strong>80%</strong>.</p>
+        <p style="margin-bottom:8px"><strong>80% des clients préfèrent</strong> qu'on leur book le prochain rendez-vous avant de partir. Ce n'est pas de la pression &mdash; c'est du service.</p>
+        <p style="margin-bottom:0"><strong>Passer de 37% à 55%</strong> = <strong class="text-green">+70 000$/trimestre</strong> de revenus prévisibles. Coût : 0$.</p>
+      </div>
+
+      <h4 style="margin-bottom:8px;color:var(--text2)">Le workflow en 4 étapes (chaque patient, chaque fois)</h4>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+        <div style="background:var(--surface2);border-radius:10px;padding:14px">
+          <div style="font-weight:700;font-size:13px;margin-bottom:6px;color:var(--blue)">ÉTAPE 1 &mdash; Foreshadowing (Vet/Tech)</div>
+          <p style="font-size:13px;font-style:italic;color:var(--text2);margin:0">
+            &laquo;&nbsp;Max est maintenant à jour sur ses vaccins. Tout va bien! Nous voudrons le revoir dans 12 mois pour son check-up annuel. Audrée à la réception va vous aider à booker ce rendez-vous avant votre départ.&nbsp;&raquo;
+          </p>
+        </div>
+        <div style="background:var(--surface2);border-radius:10px;padding:14px">
+          <div style="font-weight:700;font-size:13px;margin-bottom:6px;color:var(--blue)">ÉTAPE 2 &mdash; Handoff affirmatif (Tech &rarr; Réception)</div>
+          <p style="font-size:13px;font-style:italic;color:var(--text2);margin:0">
+            &laquo;&nbsp;Audrée, peux-tu aider Mme Tremblay à booker le prochain rendez-vous vaccins de Barkley pour dans 6 mois?&nbsp;&raquo;
+          </p>
+          <p style="font-size:12px;color:var(--text2);margin-top:6px">Statement affirmatif, pas une question. Le client doit dire "non" activement &mdash; peu le font.</p>
+        </div>
+        <div style="background:var(--surface2);border-radius:10px;padding:14px">
+          <div style="font-weight:700;font-size:13px;margin-bottom:6px;color:var(--green)">ÉTAPE 3 &mdash; Booking assumptif (Réception)</div>
+          <p style="font-size:13px;margin-bottom:6px"><strong class="text-red">NE PAS dire</strong>&nbsp;: &laquo;&nbsp;Voulez-vous booker votre prochain rendez-vous?&nbsp;&raquo;</p>
+          <p style="font-size:13px;font-style:italic;color:var(--text2);margin:0">
+            &laquo;&nbsp;D'accord! On va booker le prochain rendez-vous de Fluffy pour dans un an. Je vois que vous êtes venus un mercredi après-midi. Avez-vous une préférence pour le jour ou l'heure?&nbsp;&raquo;
+          </p>
+        </div>
+        <div style="background:var(--surface2);border-radius:10px;padding:14px">
+          <div style="font-weight:700;font-size:13px;margin-bottom:6px;color:var(--green)">ÉTAPE 4 &mdash; Confirmation (Réception)</div>
+          <p style="font-size:13px;font-style:italic;color:var(--text2);margin:0">
+            &laquo;&nbsp;Parfait! Fluffy est booké pour le mercredi 15 janvier 2027 à 14h. Vous recevrez des rappels par email et texte. Si vous devez changer, appelez-nous &mdash; c'est super simple!&nbsp;&raquo;
+          </p>
+        </div>
+      </div>
+
+      <h4 style="margin-bottom:8px;color:var(--text2)">Réponses aux objections</h4>
+      <table style="font-size:13px;margin-bottom:16px">
+        <thead><tr><th>Le client dit&hellip;</th><th>On répond&hellip;</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>&laquo;&nbsp;Je ne sais pas mon horaire dans 12 mois&nbsp;&raquo;</td>
+            <td>&laquo;&nbsp;C'est normal! On booke maintenant et vous recevrez des rappels. Vous pouvez reprogrammer facilement quand la date approche.&nbsp;&raquo;</td>
+          </tr>
+          <tr>
+            <td>&laquo;&nbsp;Je vais vous appeler quand je serai prêt&nbsp;&raquo;</td>
+            <td>&laquo;&nbsp;Bien sûr! Mais je vais vous booker maintenant pour garantir votre créneau. Si vous devez annuler, aucun problème.&nbsp;&raquo;</td>
+          </tr>
+          <tr>
+            <td>&laquo;&nbsp;C'est trop loin, je vais oublier&nbsp;&raquo;</td>
+            <td>&laquo;&nbsp;Justement! On envoie plusieurs rappels automatiques. Vous n'aurez pas à y penser.&nbsp;&raquo;</td>
+          </tr>
+          <tr>
+            <td>&laquo;&nbsp;Et si mon animal n'en a pas besoin?&nbsp;&raquo;</td>
+            <td>&laquo;&nbsp;On fera toujours une évaluation au moment du rendez-vous. Au minimum c'est un check-up pour s'assurer que tout va bien.&nbsp;&raquo;</td>
+          </tr>
+          <tr>
+            <td>&laquo;&nbsp;Je me sens poussé&nbsp;&raquo;</td>
+            <td>&laquo;&nbsp;Notre objectif c'est juste de s'assurer que [nom animal] reçoit ses soins au bon moment. Ça vous simplifie la vie!&nbsp;&raquo;</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4 style="margin-bottom:8px;color:var(--text2)">Types de rendez-vous à forward-booker (pas juste les vaccins)</h4>
+      <table style="font-size:13px;margin-bottom:16px">
+        <thead><tr><th>Catégorie</th><th>Exemples</th><th>Délai</th></tr></thead>
+        <tbody>
+          <tr><td class="bold">Post-chirurgie</td><td>Retrait sutures, recheck</td><td>10-14 jours</td></tr>
+          <tr><td class="bold">Maladies chroniques</td><td>Diabète (glucose), rénal (bloodwork), allergies</td><td>3-6 mois</td></tr>
+          <tr><td class="bold">Wellness annuel</td><td>Check-up + vaccins</td><td>12 mois</td></tr>
+          <tr><td class="bold">Senior</td><td>Examen biannuel</td><td>6 mois</td></tr>
+          <tr><td class="bold">Dentisterie</td><td>Post-nettoyage monitoring</td><td>90 jours</td></tr>
+          <tr><td class="bold">Chiot/chaton</td><td>Série boosters</td><td>3-4 semaines</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-green">
+        <strong>Les 3 principes à afficher dans l'aire de travail&nbsp;:</strong><br>
+        1. Forward booking = <strong>service client</strong>, pas tactique de vente<br>
+        2. <strong>Langage assumptif</strong>&nbsp;: &laquo;&nbsp;On va booker&nbsp;&raquo;, pas &laquo;&nbsp;Voulez-vous?&nbsp;&raquo;<br>
+        3. <strong>Toujours rassurer</strong>&nbsp;: reprogrammer est facile, rappels automatiques, zéro pression
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PRIORITÉ #2 ===== -->
+  <div style="background:var(--surface);border:2px solid var(--orange);border-radius:16px;padding:28px;margin-bottom:24px">
+    <h3 style="color:var(--orange);margin-bottom:4px;font-size:18px">PRIORITÉ #2 &mdash; Reprendre le contrôle du mardi</h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:16px">&laquo;&nbsp;Decentralized Command&nbsp;&raquo; &mdash; Nancy a pleine autorité sur la dotation du mardi.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Le diagnostic</h3>
+        <p>13 mardis de Q4 analysés. <strong>Aucun n'atteint la cible de 45%.</strong></p>
+        <p>Masse sal. moyenne mardi&nbsp;: <strong class="text-red">4 133$</strong> (vs 2 177$ le vendredi)</p>
+        <p>45% des heures de gestion tombent le mardi</p>
+        <p>Ratio moyen mardi&nbsp;: <strong class="text-red">66.8%</strong></p>
+      </div>
+      <div class="card">
+        <h3>Les 3 actions</h3>
+        <p><strong>A.</strong> Déplacer réunions et inventaire au lundi matin (moins charge)</p>
+        <p><strong>B.</strong> Réduire d'une TSA le mardi OU programmer les chirurgies complexes le mardi</p>
+        <p><strong>C.</strong> Cible&nbsp;: ratio mardi sous 55% d'ici mars</p>
+      </div>
+    </div>
+
+    <table style="font-size:13px;margin-top:12px">
+      <thead><tr><th>Action</th><th>Propriétaire</th><th>Mesure</th><th>Échéance</th></tr></thead>
+      <tbody>
+        <tr><td class="bold">Déplacer gestion/inventaire du mardi au lundi</td><td>Nancy</td><td>Heures gestion mardi &lt; 2h</td><td>10 février</td></tr>
+        <tr><td>Programmer 1 bloc chirurgical majeur le mardi</td><td>Direction med.</td><td>Revenu mardi &gt; 7 500$</td><td>Février</td></tr>
+        <tr><td>Revoir dotation Agendrix&nbsp;: maximum 3 TSA le mardi</td><td>Nancy</td><td>Masse sal. mardi &lt; 3 200$</td><td>10 février</td></tr>
+      </tbody>
+    </table>
+    <div class="sol-meta" style="margin-top:12px"><span style="background:var(--orange-bg);color:var(--orange)">Impact : ~15 000$/trim en masse sal. + ~12 000$/trim en chirurgies</span></div>
+  </div>
+
+  <!-- ===== PRIORITÉ #3 ===== -->
+  <div style="background:var(--surface);border:2px solid var(--yellow);border-radius:16px;padding:28px;margin-bottom:24px">
+    <h3 style="color:var(--yellow);margin-bottom:4px;font-size:18px">PRIORITÉ #3 &mdash; Chaque journée doit avoir un bloc chirurgie</h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:16px">&laquo;&nbsp;Default Aggressive&nbsp;&raquo; &mdash; On n'attend pas que les chirurgies arrivent. On les planifie.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>La preuve</h3>
+        <p>Jours avec chirurgie&nbsp;: revenu moyen <strong class="text-green">9 200$</strong></p>
+        <p>Jours sans chirurgie&nbsp;: revenu moyen <strong class="text-red">5 800$</strong></p>
+        <p>Différence&nbsp;: <strong>+3 400$ par jour de chirurgie</strong></p>
+        <p style="margin-top:8px">1 bloc/semaine de plus = <strong>+13 600$/mois</strong></p>
+      </div>
+      <div class="card">
+        <h3>Comment</h3>
+        <p><strong>1.</strong> Identifier les chirurgies en attente (stérilisations, dentisteries)</p>
+        <p><strong>2.</strong> Bloquer un créneau chirurgie fixe chaque mardi et jeudi</p>
+        <p><strong>3.</strong> Convertir les &laquo;&nbsp;Bloqué&nbsp;&raquo; non-justifiés en créneaux chirurgie</p>
+        <p><strong>4.</strong> Rappels proactifs aux clients avec chirurgies recommandées</p>
+      </div>
+    </div>
+    <div class="sol-meta" style="margin-top:12px"><span style="background:var(--yellow-bg);color:var(--yellow)">Impact : +13 000$ à 20 000$/mois</span><span>Le 19 déc. a montré que c'est possible</span></div>
+  </div>
+
+  <!-- ===== ACTIONS SUPPORT ===== -->
+  <div class="sep"></div>
+  <h3 style="color:var(--text2);margin-bottom:16px;font-size:14px;text-transform:uppercase;letter-spacing:1px">Actions de support &mdash; &laquo;&nbsp;Cover and Move&nbsp;&raquo;</h3>
+
+  <div class="sol-card">
+    <div class="sol-icon urgent">A</div>
+    <div>
+      <div class="sol-title">Confirmer les 40K$ de salaires de décembre avec le comptable</div>
+      <div class="sol-desc">
+        &laquo;&nbsp;Confront the brutal facts&nbsp;&raquo; (Jim Collins). On ne peut pas planifier 2026 sans comprendre décembre 2025.
+        Vacances payées? Bonus? Erreur? La réponse change tout le diagnostic.
+      </div>
+      <div class="sol-meta"><span>Qui : Direction</span><span>Échéance : 31 janvier</span></div>
+    </div>
+  </div>
+
+  <div class="sol-card">
+    <div class="sol-icon urgent">B</div>
+    <div>
+      <div class="sol-title">48K$ de frais professionnels d'octobre &mdash; confirmé ponctuel</div>
+      <div class="sol-desc">
+        Confirmé&nbsp;: ces frais sont exceptionnels (audit annuel, dossier légal). La perte récurrente du Q4 est donc de <strong>-103K$</strong> au lieu de -151K$.
+        Ne pas les inclure dans le budget récurrent.
+      </div>
+      <div class="sol-meta"><span>Qui : Comptable</span><span style="background:var(--green-bg);color:var(--green)">Réglé</span></div>
+    </div>
+  </div>
+
+  <div class="sol-card">
+    <div class="sol-icon soon">C</div>
+    <div>
+      <div class="sol-title">Documenter 95% des annulations dans EzyVet</div>
+      <div class="sol-desc">
+        &laquo;&nbsp;Discipline Equals Freedom&nbsp;&raquo; (Jocko). 60% des annulations n'ont aucune raison documentée.
+        On ne peut pas réduire ce qu'on ne mesure pas. Chaque annulation doit avoir un code de raison.
+        Sans exception.
+      </div>
+      <div class="sol-meta"><span>Qui : Équipe entière</span><span>Objectif : 95% en 4 semaines</span></div>
+    </div>
+  </div>
+
+  <div class="sol-card">
+    <div class="sol-icon soon">D</div>
+    <div>
+      <div class="sol-title">Augmenter la valeur moyenne par visite de 189$ à 220$</div>
+      <div class="sol-desc">
+        Recommandations systématiques de labo interne (sous-prescrit), forfaits préventifs, suppléments.
+        Le labo interne a la meilleure marge et est le plus facile à prescrire. Chaque consultation devrait
+        inclure une recommandation de bilan sanguin ou d'analyse.
+      </div>
+      <div class="sol-meta"><span>Qui : Direction médicale</span><span>Levier : +31$/visite = +8 000$/mois</span><span>Échéance : 28 février</span></div>
+    </div>
+  </div>
+
+  <div class="sol-card">
+    <div class="sol-icon plan">E</div>
+    <div>
+      <div class="sol-title">Utiliser les États des résultats comme seule source financière</div>
+      <div class="sol-desc">
+        Nos rapports Agendrix sous-estiment la masse salariale de 46K$/trimestre.
+        &laquo;&nbsp;Radical Transparency&nbsp;&raquo; (Ray Dalio) &mdash; toute l'équipe de direction doit voir les vrais chiffres,
+        pas les estimations optimistes. Importer les ER mensuellement.
+      </div>
+      <div class="sol-meta"><span>Qui : Direction + Tech</span><span>Échéance : 14 février</span></div>
+    </div>
+  </div>
+
+  <div class="sol-card">
+    <div class="sol-icon plan">F</div>
+    <div>
+      <div class="sol-title">Budget 2026 avec les charges réelles + réconciliation mensuelle</div>
+      <div class="sol-desc">
+        Intégrer vacances (~40K$/déc), reconnaissance (~8K$/an), admin (~23K$/trim), REER.
+        Alertes automatiques si écart &gt; 5% entre ER et rapports internes.
+        &laquo;&nbsp;Hope is not a strategy&nbsp;&raquo; (Ben Horowitz).
+      </div>
+      <div class="sol-meta"><span>Qui : Direction + Comptable</span><span>Échéance : 28 février</span></div>
+    </div>
+  </div>
+
+  <div class="sol-card">
+    <div class="sol-icon plan">G</div>
+    <div>
+      <div class="sol-title">Auditer les 241 heures &laquo;&nbsp;Bloqué&nbsp;&raquo; et convertir 50%</div>
+      <div class="sol-desc">
+        Les créneaux bloqués représentent 21% de l'agenda (voir Section 3).
+        Auditer chaque type de bloc&nbsp;: nécessaire (récupération chirurgicale), réductible (admin &rarr; fin de journée),
+        ou convertible (réserves urgences non réclamées &rarr; ouvrir à 14h).
+      </div>
+      <div class="sol-meta"><span>Qui : Direction médicale + Nancy</span><span>Échéance : 14 février</span><span>Levier : +26 000$/trim</span></div>
+    </div>
+  </div>
+
+  <!-- ===== STRATÉGIES DE CROISSANCE DU REVENU PAR PATIENT ===== -->
+  <div class="sep"></div>
+  <h3 style="color:var(--text2);margin-bottom:16px;font-size:14px;text-transform:uppercase;letter-spacing:1px">Stratégies de croissance &mdash; Augmenter le revenu par patient</h3>
+
+  <div class="callout" style="border-left:3px solid var(--accent);margin-bottom:24px;font-size:14px;line-height:1.8">
+    <strong>Données de l'industrie (2024-2025)&nbsp;:</strong> Les cliniques canadiennes ont vu une augmentation de <strong>99%</strong> du revenu brut par client entre 2007 et 2020.
+    Les 2/3 de la croissance des revenus viennent de l'<strong>amélioration de la compliance</strong>, pas des augmentations de prix.
+    <br><br>
+    <strong>Où se situe VÉTA par rapport aux benchmarks?</strong>
+  </div>
+
+  <!-- BENCHMARKS INDUSTRIE -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>VÉTA vs benchmarks industrie 2025</h3>
+    <table style="font-size:13px">
+      <thead><tr><th>Métrique</th><th class="text-right">VÉTA (actuel)</th><th class="text-right">Benchmark industrie</th><th>Écart</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="bold">Revenu par vétérinaire (annualisé)</td>
+          <td class="text-right mono">~460 000$</td>
+          <td class="text-right mono text-green bold">500-600K$</td>
+          <td><span class="tag tag-med">-22%</span></td>
+        </tr>
+        <tr>
+          <td class="bold">Marge nette</td>
+          <td class="text-right mono text-red">-15%</td>
+          <td class="text-right mono text-green bold">10-15%</td>
+          <td><span class="tag tag-crit">CRITIQUE</span></td>
+        </tr>
+        <tr>
+          <td class="bold">Ratio masse salariale</td>
+          <td class="text-right mono text-red">61-67%</td>
+          <td class="text-right mono text-green bold">&lt;45%</td>
+          <td><span class="tag tag-crit">+20 pts</span></td>
+        </tr>
+        <tr>
+          <td class="bold">Valeur moyenne par visite (ATV)</td>
+          <td class="text-right mono text-orange">189$</td>
+          <td class="text-right mono text-green bold">220$+</td>
+          <td><span class="tag tag-med">-14%</span></td>
+        </tr>
+        <tr>
+          <td class="bold">Taux de compliance vaccins</td>
+          <td class="text-right mono text-muted">N/D</td>
+          <td class="text-right mono">87% (vaccins) / 50% (dentaire)</td>
+          <td><span class="tag tag-med">À MESURER</span></td>
+        </tr>
+        <tr>
+          <td class="bold">Prébooking</td>
+          <td class="text-right mono text-red">37%</td>
+          <td class="text-right mono text-green bold">40-50%</td>
+          <td><span class="tag tag-crit">EN CHUTE</span></td>
+        </tr>
+        <tr>
+          <td class="bold">Rétention client</td>
+          <td class="text-right mono text-muted">N/D</td>
+          <td class="text-right mono text-green bold">90%+</td>
+          <td><span class="tag tag-med">À MESURER</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout callout-orange">
+      <strong>Règle du 5:1</strong>&nbsp;: Un vétérinaire devrait générer <strong>5 fois son salaire</strong> en revenus.
+      Si une vet gagne 100K$/an, elle devrait produire 500K$. La production annualisée de VÉTA (~1.66M$ / 3 vets = ~553K$) respecte cette règle &mdash;
+      <strong>le problème n'est pas la production, c'est la structure de coûts</strong>.
+    </div>
+  </div>
+
+  <!-- PRIORITÉ #4 : CHARGES MANQUÉES -->
+  <div style="background:var(--surface);border:2px solid var(--accent);border-radius:16px;padding:28px;margin-bottom:24px">
+    <h3 style="color:var(--accent);margin-bottom:4px;font-size:18px">PRIORITÉ #4 &mdash; Audit des charges manquées (missed charges)</h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:16px">L'industrie estime que <strong>5 à 10%</strong> de toutes les charges ne sont jamais facturées. Pour VÉTA, ça représente <strong>20K$ à 40K$ par trimestre</strong>.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3 style="color:var(--red)">L'ampleur du problème</h3>
+        <p><strong>17% des tests de labo</strong> ne sont pas facturés (moyenne industrie).</p>
+        <p>Les items les plus oubliés&nbsp;: injections, frais de dispensation, examens fécaux, cytologies, consultations de suivi.</p>
+        <p style="margin-top:8px">Un test de cytologie à 45$ oublié <strong>une fois par jour</strong> = <strong class="text-red">13 000$/an perdu</strong>.</p>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--green)">Les solutions</h3>
+        <p><strong>1.</strong> Checklists de facturation par type de visite dans EzyVet (template)</p>
+        <p><strong>2.</strong> Audit mensuel&nbsp;: comparer dossier médical vs facture sur 20 dossiers aléatoires</p>
+        <p><strong>3.</strong> Règle&nbsp;: si c'est dans le dossier médical, c'est sur la facture. Pas d'exception.</p>
+        <p><strong>4.</strong> Former l'équipe sur l'impact&nbsp;: chaque charge manquée = salaire non-financé</p>
+      </div>
+    </div>
+
+    <table style="font-size:13px;margin-top:12px">
+      <thead><tr><th>Action</th><th>Propriétaire</th><th>Mesure</th><th>Échéance</th></tr></thead>
+      <tbody>
+        <tr><td class="bold">Audit 20 dossiers aléatoires (comparer dossier médical vs facture)</td><td>Direction med.</td><td>% écart identifié</td><td>14 février</td></tr>
+        <tr><td>Créer templates de facturation par type de visite dans EzyVet</td><td>Direction med. + Tech</td><td>Templates actifs</td><td>28 février</td></tr>
+        <tr><td>Revue quotidienne&nbsp;: chaque facture est revue avant clôture du dossier</td><td>TSA</td><td>0 dossier fermé sans facture complète</td><td>Mars</td></tr>
+      </tbody>
+    </table>
+    <div class="sol-meta" style="margin-top:12px"><span style="background:var(--accent-light);color:var(--accent)">Impact conservateur : +20 000$/trim</span><span>Coût : 0$ &mdash; processus interne</span></div>
+  </div>
+
+  <!-- PRIORITÉ #5 : PLANS DE BIEN-ÊTRE -->
+  <div style="background:var(--surface);border:2px solid var(--accent);border-radius:16px;padding:28px;margin-bottom:24px">
+    <h3 style="color:var(--accent);margin-bottom:4px;font-size:18px">PRIORITÉ #5 &mdash; Lancer un plan de bien-être (wellness plan)</h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:16px">
+      Revenus mensuels récurrents + meilleure compliance + fidélisation client. Les clients inscrits visitent plus souvent et acceptent plus de services.
+    </p>
+
+    <!-- ALERTE RÉGLEMENTAIRE OMVQ -->
+    <div class="callout" style="background:#fff3cd;border-left:4px solid #ffc107;margin-bottom:20px">
+      <strong style="color:#856404">&#9888; Contrainte réglementaire OMVQ &mdash; Article 20 du Code de Déontologie</strong>
+      <p style="color:#856404;margin-top:8px;font-size:13px">
+        Au Québec, les forfaits de soins impliquant des paiements récurrents <strong>doivent être administrés par un Third Party Administrator (TPA)</strong> indépendant.
+        La clinique ne peut pas directement gérer la collecte de paiements récurrents pour des services vétérinaires (conflit d'intérêts potentiel).
+      </p>
+      <p style="color:#856404;margin-top:8px;font-size:13px">
+        <strong>Conséquence&nbsp;:</strong> Avant de lancer, il faut <strong>valider avec l'OMVQ</strong> et sélectionner un TPA conforme.
+        Ceci ajoute une <strong>Phase 0 (février)</strong> de préparation légale/technique obligatoire.
+      </p>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Le modèle + contrainte TPA</h3>
+        <p>Forfait mensuel regroupant examen annuel + vaccins + analyses + soins dentaires préventifs.</p>
+        <p style="margin-top:8px"><strong>TPA recommandé&nbsp;:</strong> <strong>VetBilling</strong> (59-79$/mois) &mdash; spécialisé vétérinaire, intégration EzyVet, conforme OMVQ.</p>
+        <p style="margin-top:8px">Le TPA gère prélèvements automatiques, défauts de paiement, et conformité réglementaire.</p>
+      </div>
+      <div class="card">
+        <h3>Pourquoi c'est pertinent pour VÉTA</h3>
+        <p><strong>Prébooking automatique</strong>&nbsp;: les clients wellness sont déjà bookés &mdash; 100% de prébooking garanti.</p>
+        <p><strong>ATV supérieur</strong>&nbsp;: +25-35% services additionnels acceptés (au-delà du forfait).</p>
+        <p><strong>Compliance +30-40%</strong>&nbsp;: soins préventifs utilisés car déjà payés.</p>
+        <p><strong>Rétention&nbsp;:</strong> clients wellness churent <strong>60-70% moins</strong> que les clients réguliers.</p>
+      </div>
+    </div>
+
+    <!-- STRUCTURE 3 TIERS -->
+    <h4 style="margin-top:20px;margin-bottom:12px;color:var(--text1)">Structure recommandée &mdash; 3 forfaits</h4>
+    <table style="font-size:13px">
+      <thead><tr><th>Forfait</th><th>Prix/mois</th><th>Services inclus</th><th>Valeur réelle</th><th>Breakage*</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="bold">Chiot/Chaton (0-1 an)</td>
+          <td class="text-center mono">35$</td>
+          <td>Série vaccins (3 visites) + examen + vermifuge + test FIV/FeLV + conseil nutrition</td>
+          <td class="text-center">500-600$/an</td>
+          <td class="text-center">25-30%</td>
+        </tr>
+        <tr>
+          <td class="bold">Adulte (1-7 ans)</td>
+          <td class="text-center mono">30$</td>
+          <td>Examen annuel + vaccins rappel + analyses sanguines + examen dentaire + vermifuge</td>
+          <td class="text-center">450-500$/an</td>
+          <td class="text-center">30-35%</td>
+        </tr>
+        <tr>
+          <td class="bold">Senior (7+ ans)</td>
+          <td class="text-center mono">45$</td>
+          <td>2 examens/an + bilan sanguin complet + analyses urinaires + dentaire approfondi + suivi chronique</td>
+          <td class="text-center">700-900$/an</td>
+          <td class="text-center">25-30%</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:11px;color:var(--text2);margin-top:4px">*Breakage = services inclus mais non utilisés (~30% en moyenne). C'est le facteur de rentabilité clé. Objectif : 70-80% utilisation (compliance élevée tout en maintenant la marge).</p>
+
+    <!-- PROJECTIONS AJUSTÉES -->
+    <div class="callout callout-green" style="margin-top:16px">
+      <strong>Projections ajustées (avec coûts TPA et breakage)&nbsp;:</strong>
+      <br><br>
+      <table style="font-size:13px;margin:0">
+        <thead><tr><th>Année</th><th>Clients inscrits</th><th>Revenus bruts</th><th>MRR</th><th>Marge nette</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Année 1</strong> (5% pénétration)</td><td class="text-center">43</td><td class="text-center">~19K$</td><td class="text-center mono">1 575$/mois</td><td class="text-center text-green bold">~5K$ net</td></tr>
+          <tr><td><strong>Année 2</strong> (10% pénétration)</td><td class="text-center">85</td><td class="text-center">~37K$</td><td class="text-center mono">3 120$/mois</td><td class="text-center text-green bold">~10K$ net</td></tr>
+          <tr><td><strong>Année 3</strong> (15% pénétration)</td><td class="text-center">128</td><td class="text-center">~56K$</td><td class="text-center mono">4 680$/mois</td><td class="text-center text-green bold">~16K$ net</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:12px;margin-top:8px"><strong>ROI année 1&nbsp;:</strong> 125-165% (investissement initial ~3-5K$ en setup + TPA 59-79$/mois).</p>
+      <p style="font-size:12px;margin-top:4px"><strong>Valeur cachée&nbsp;:</strong> Les revenus additionnels hors forfait (+25-35% services) ne sont pas comptés ci-dessus.</p>
+    </div>
+
+    <!-- PLAN D'ACTION RÉVISÉ AVEC PHASE 0 -->
+    <h4 style="margin-top:20px;margin-bottom:12px;color:var(--text1)">Plan d'action révisé (Phase 0 ajoutée)</h4>
+    <table style="font-size:13px">
+      <thead><tr><th>Action</th><th>Propriétaire</th><th>Mesure</th><th>Échéance</th></tr></thead>
+      <tbody>
+        <tr style="background:#fff3cd">
+          <td class="bold">Phase 0 &mdash; Valider conformité OMVQ (Article 20) pour le modèle forfait + TPA</td>
+          <td>Direction</td>
+          <td>Avis écrit OMVQ</td>
+          <td class="bold">14 février</td>
+        </tr>
+        <tr style="background:#fff3cd">
+          <td>Phase 0 &mdash; Contacter VetBilling : démo, devis, validation intégration EzyVet</td>
+          <td>Direction + Tech</td>
+          <td>TPA sélectionné</td>
+          <td class="bold">28 février</td>
+        </tr>
+        <tr style="background:#fff3cd">
+          <td>Phase 0 &mdash; Consulter comptable : implications TPS/TVQ sur forfaits wellness</td>
+          <td>Direction</td>
+          <td>Avis fiscal</td>
+          <td>28 février</td>
+        </tr>
+        <tr>
+          <td class="bold">Phase 1 &mdash; Concevoir 3 forfaits wellness (chiot, adulte, senior) avec prix et services</td>
+          <td>Direction med.</td>
+          <td>Forfaits documentés</td>
+          <td>15 mars</td>
+        </tr>
+        <tr>
+          <td>Phase 1 &mdash; Former l'équipe sur scripts et processus d'inscription</td>
+          <td>Direction + Audrée</td>
+          <td>Formation complétée</td>
+          <td>31 mars</td>
+        </tr>
+        <tr>
+          <td>Phase 2 &mdash; Lancement pilote : offrir aux 50 clients les plus fidèles (3+ visites/an)</td>
+          <td>Audrée + Direction</td>
+          <td>25 inscriptions</td>
+          <td>15 mai</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="sol-meta" style="margin-top:12px"><span style="background:var(--green-bg);color:var(--green)">Impact année 1 : ~19K$ bruts (5K$ net)</span><span>Impact compliance : +30-40%</span><span style="background:#fff3cd;color:#856404">Prérequis : validation OMVQ</span></div>
+  </div>
+
+  <!-- PRIORITÉ #6 : EXPANSION DENTAIRE -->
+  <div style="background:var(--surface);border:2px solid var(--accent);border-radius:16px;padding:28px;margin-bottom:24px">
+    <h3 style="color:var(--accent);margin-bottom:4px;font-size:18px">PRIORITÉ #6 &mdash; Expansion des services dentaires</h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:16px">
+      Le segment dentaire est le plus sous-utilisé en médecine vétérinaire. La plupart des cliniques génèrent <strong>2.5-3.5%</strong> de leurs revenus
+      en dentaire, mais <strong>50% des animaux de 5+ ans</strong> ont au moins un problème dentaire douloureux.
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3 style="color:var(--green)">Le potentiel</h3>
+        <p>Chaque nettoyage dentaire = <strong>400-800$</strong> de revenu (anesthésie + nettoyage + radio + extraction si nécessaire).</p>
+        <p style="margin-top:8px">1 nettoyage dentaire additionnel par jour = <strong>+8 000$ à 16 000$/mois</strong>.</p>
+        <p style="margin-top:8px">Le marché dentaire vétérinaire US croît à <strong>6.2%/an</strong> et vaudra &gt;4G$ en 2030.</p>
+      </div>
+      <div class="card">
+        <h3>Actions concrètes</h3>
+        <p><strong>1.</strong> Examen dentaire systématique à <strong>chaque visite</strong> (même pour un vaccin)</p>
+        <p><strong>2.</strong> Photos dentaires montrées au client (impact visuel = acceptation &uarr;)</p>
+        <p><strong>3.</strong> &laquo;&nbsp;Mois de la santé dentaire&nbsp;&raquo; avec promotion groupée (nettoyage + examen + radio)</p>
+        <p><strong>4.</strong> Forward-booker les suivis dentaires à 90 jours post-nettoyage</p>
+      </div>
+    </div>
+    <div class="sol-meta" style="margin-top:12px"><span style="background:var(--accent-light);color:var(--accent)">Impact : +8 000$ à 16 000$/mois</span><span>Dre Brazeau (chirurgie) = atout clé</span></div>
+  </div>
+
+  <!-- COMPLIANCE CLIENT : LE MULTIPLICATEUR -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>La compliance client : le multiplicateur silencieux de revenus</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      L'industrie montre que <strong>2/3 de la croissance des revenus</strong> vient de l'amélioration de la compliance, pas des augmentations de prix.
+      Les taux de compliance actuels de l'industrie révèlent un potentiel énorme&nbsp;:
+    </p>
+    <div class="hero-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:16px">
+      <div class="hero-card">
+        <div class="label">Vaccins de base</div>
+        <div class="value" style="color:var(--green)">87%</div>
+        <div class="sub">Bien respecté</div>
+      </div>
+      <div class="hero-card">
+        <div class="label">Soins dentaires</div>
+        <div class="value" style="color:var(--orange)">50%</div>
+        <div class="sub">1 animal sur 2 ne reçoit pas</div>
+      </div>
+      <div class="hero-card">
+        <div class="label">Dépistages seniors</div>
+        <div class="value" style="color:var(--red)">34%</div>
+        <div class="sub">2 sur 3 manquent le bilan</div>
+      </div>
+      <div class="hero-card">
+        <div class="label">Régimes thérapeutiques</div>
+        <div class="value" style="color:var(--red)">21%</div>
+        <div class="sub">4 sur 5 ne suivent pas</div>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card" style="border-left:3px solid var(--green)">
+        <h3>Spectrum of Care : offrir des options</h3>
+        <p>Les clients ne choisissent pas entre &laquo;&nbsp;tout&nbsp;&raquo; et &laquo;&nbsp;rien&nbsp;&raquo;. Offrir <strong>2-3 niveaux</strong> de soins augmente l'acceptation globale.</p>
+        <p style="margin-top:8px"><strong>Exemple&nbsp;:</strong> Au lieu de proposer un bilan complet à 350$, offrir&nbsp;:</p>
+        <p style="margin-top:4px">&bull; Bilan complet : 350$ (recommandé)</p>
+        <p>&bull; Bilan essentiel : 220$</p>
+        <p>&bull; Bilan minimal : 120$</p>
+        <p style="margin-top:8px">Résultat&nbsp;: plus de clients choisissent <strong>quelque chose</strong> au lieu de refuser tout.</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--accent)">
+        <h3>Flexibilité de paiement</h3>
+        <p>L'offre de plans de versements pour traitements coûteux élimine la barrière financière.</p>
+        <p style="margin-top:8px">Une clinique utilisant des plans de paiement internes a collecté <strong>+250 000$</strong> de revenus additionnels, avec <strong>94% des comptes payés intégralement</strong>.</p>
+        <p style="margin-top:8px"><strong>Application pour VÉTA&nbsp;:</strong> Offrir des versements pour chirurgies &gt;500$ et dentisteries complètes.</p>
+      </div>
+    </div>
+
+    <div class="callout callout-green">
+      <strong>Le coût d'acquisition vs rétention&nbsp;:</strong> Acquérir un nouveau client coûte <strong>5 à 7 fois plus</strong> que retenir un existant.
+      Une augmentation de <strong>10% de la rétention client</strong> peut augmenter les revenus jusqu'à <strong>25%</strong>.
+      La probabilité de vendre à un client existant est de <strong>60-70%</strong> vs <strong>5-20%</strong> pour un nouveau.
+      <br><br>
+      <strong>Le levier le plus rentable pour VÉTA n'est pas d'attirer plus de patients &mdash; c'est de mieux servir ceux qu'on a déjà.</strong>
+    </div>
+  </div>
+
+  <!-- RATIO PERSONNEL : LEVIER MÉCONNU -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Le ratio personnel-vétérinaire : un levier de 79K$/an par technicien</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      Chaque technicien vétérinaire enregistré (TSA/RVT) additionnel par vétérinaire augmente le revenu annuel brut de <strong>79 118$ par vétérinaire</strong>.
+      Les TSA rémunérés 21$+/h génèrent <strong>122 342$</strong> de revenus bruts supplémentaires.
+    </p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>La donnée clé</h3>
+        <p>Une augmentation d'une unité d'heures de personnel médical par heure de travail vétérinaire = <strong>+20.5% de revenus</strong>.</p>
+        <p style="margin-top:8px">Ratios optimaux&nbsp;: <strong>9:1</strong> (techniciens:vets) et <strong>8:1</strong> (personnel non-médical:vets).</p>
+        <p style="margin-top:8px">Plus le vet délègue, plus elle se concentre sur les actes à haute valeur (examen, diagnostic, chirurgie).</p>
+      </div>
+      <div class="card">
+        <h3>Application pour VÉTA</h3>
+        <p>Avec 3 vétérinaires, VÉTA devrait avoir <strong>~9 TSA</strong> et <strong>~8 personnel non-médical</strong> pour maximiser la productivité.</p>
+        <p style="margin-top:8px">Chaque heure où une vet fait du travail de TSA = <strong>~220$/h perdu</strong> (coût d'opportunité).</p>
+        <p style="margin-top:8px">Le paradoxe&nbsp;: réduire les heures-staff pour baisser le ratio MS peut <strong>réduire les revenus encore plus</strong>.
+          L'objectif est d'augmenter le <strong>revenu par heure-staff</strong>, pas de couper les heures.</p>
+      </div>
+    </div>
+    <div class="callout callout-orange">
+      <strong>Attention au piège de la réduction d'effectifs&nbsp;:</strong> La solution au ratio MS de 67% n'est <strong>pas</strong> de couper du personnel.
+      C'est d'augmenter le revenu par heure-staff de 80.87$/h à 95$/h. Couper du personnel réduit la capacité de facturation
+      et crée un cercle vicieux. <strong>Investir dans la productivité par TSA est plus rentable que de couper des postes.</strong>
+    </div>
+  </div>
+
+  <!-- RESTRUCTURATION HORAIRE : TIME-BLOCKING -->
+  <div style="background:var(--surface);border:2px solid var(--accent);border-radius:16px;padding:28px;margin-bottom:24px">
+    <h3 style="color:var(--accent);margin-bottom:4px;font-size:18px">PRIORITÉ #7 &mdash; Restructurer l'horaire avec le time-blocking</h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:16px">
+      Le time-blocking consiste à réserver des blocs horaires pour des types d'interventions spécifiques.
+      C'est la solution directe au problème du mardi (gestion + inventaire) et des 241 heures &laquo;&nbsp;Bloqué&nbsp;&raquo;.
+    </p>
+
+    <div class="card card-full" style="margin-bottom:16px">
+      <h3>Modèle de time-blocking proposé pour VÉTA (3 vets)</h3>
+      <table style="font-size:12px">
+        <thead><tr><th>Plage</th><th>Vet 1 (Cockburn)</th><th>Vet 2 (Cohen)</th><th>Vet 3 (Brazeau)</th><th>TSA &amp; Réception</th></tr></thead>
+        <tbody>
+          <tr style="background:var(--green-bg)">
+            <td class="bold">8h-9h</td>
+            <td>Consultations haute valeur</td>
+            <td>Consultations haute valeur</td>
+            <td class="text-green bold">Chirurgies planifiées</td>
+            <td>1 tech chx + 2 techs consult + 2 CSR</td>
+          </tr>
+          <tr>
+            <td class="bold">9h-12h</td>
+            <td>Consultations stream (15 min)</td>
+            <td>Consultations stream (15 min)</td>
+            <td>Chirurgies + consultations</td>
+            <td>2-3 techs rotatifs + 2 CSR</td>
+          </tr>
+          <tr style="background:var(--surface2)">
+            <td class="bold">12h-13h</td>
+            <td>Admin / Pause</td>
+            <td>Pause / Admin</td>
+            <td>Pause</td>
+            <td>1 tech + 1 CSR (min.)</td>
+          </tr>
+          <tr>
+            <td class="bold">13h-15h</td>
+            <td>Procédures diagnostiques</td>
+            <td>Consultations + urgences</td>
+            <td>Dentisteries / Chirurgies PM</td>
+            <td>2 techs + 2 CSR</td>
+          </tr>
+          <tr>
+            <td class="bold">15h-17h30</td>
+            <td>Consultations + slot urgence 30 min/h</td>
+            <td>Consultations + suivis</td>
+            <td>Consultations</td>
+            <td>2 techs + 2 CSR</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card-grid">
+      <div class="card" style="border-left:3px solid var(--green)">
+        <h3>Ce que ça résout</h3>
+        <p><strong>Mardi</strong>&nbsp;: Déplacer gestion/inventaire de 8h-9h mardi vers lundi fin de journée. Le mardi commence par des actes facturables.</p>
+        <p style="margin-top:6px"><strong>Bloqué</strong>&nbsp;: Les 241h de &laquo;&nbsp;Bloqué&nbsp;&raquo; sont remplacées par des slots urgence spécifiques (30 min/h en fin de journée). Le reste est ouvert.</p>
+        <p style="margin-top:6px"><strong>8h-9h</strong>&nbsp;: L'heure en or (272$/facture) est protégée pour les actes haute valeur + chirurgies.</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--accent)">
+        <h3>Les données qui soutiennent</h3>
+        <p>Les cliniques utilisant le time-blocking voient une <strong>amélioration de 46%</strong> de l'efficacité opérationnelle.</p>
+        <p style="margin-top:6px">Les rappels automatisés réduisent les no-shows de <strong>25-40%</strong>.</p>
+        <p style="margin-top:6px">Réserver un slot urgence par heure évite de bouleverser l'horaire &mdash; <strong>modified wave scheduling</strong>.</p>
+      </div>
+    </div>
+    <div class="sol-meta" style="margin-top:12px"><span style="background:var(--accent-light);color:var(--accent)">Impact : absorbe mardi + bloqué + heure en or</span><span>Coût : 0$ &mdash; réorganisation interne</span></div>
+  </div>
+
+  <!-- DÉLÉGATION TSA -->
+  <div style="background:var(--surface);border:2px solid var(--accent);border-radius:16px;padding:28px;margin-bottom:24px">
+    <h3 style="color:var(--accent);margin-bottom:4px;font-size:18px">PRIORITÉ #8 &mdash; Maximiser la délégation aux TSA</h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:16px">
+      Chaque heure où une vétérinaire fait du travail de TSA = <strong>~220$/h de coût d'opportunité</strong>.
+      La délégation optimale libère 20-30% du temps vet = 400-600h/an = <strong>160-240K$ de capacité de revenus</strong>.
+    </p>
+
+    <table style="font-size:13px;margin-bottom:16px">
+      <thead><tr><th>Tâche</th><th>Qui le fait actuellement?</th><th>Qui devrait le faire?</th><th>Temps vet libéré</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="bold">Vaccinations de routine</td>
+          <td>Vétérinaire (15-20 min)</td>
+          <td class="text-green bold">TSA (vet : 5 min révision)</td>
+          <td class="text-right mono text-green">-10-15 min/consult</td>
+        </tr>
+        <tr>
+          <td class="bold">Prélèvements sanguins</td>
+          <td>Vétérinaire ou TSA</td>
+          <td class="text-green bold">TSA systématiquement</td>
+          <td class="text-right mono text-green">-10 min/procédure</td>
+        </tr>
+        <tr>
+          <td class="bold">Éducation client (post-chx, nutrition)</td>
+          <td>Vétérinaire</td>
+          <td class="text-green bold">TSA avec protocoles écrits</td>
+          <td class="text-right mono text-green">-10-15 min/consult</td>
+        </tr>
+        <tr>
+          <td class="bold">Suivis post-opératoires (sutures, pansements)</td>
+          <td>Vétérinaire</td>
+          <td class="text-green bold">TSA + vet si complication</td>
+          <td class="text-right mono text-green">-15-20 min/suivi</td>
+        </tr>
+        <tr>
+          <td class="bold">Monitoring anesthésie</td>
+          <td>Mixte</td>
+          <td class="text-green bold">TSA (libère vet pour autre chirurgie ou consult)</td>
+          <td class="text-right mono text-green">-45-60 min/chirurgie</td>
+        </tr>
+        <tr>
+          <td class="bold">Détartrage dentaire (sous anesthésie)</td>
+          <td>Vétérinaire</td>
+          <td class="text-green bold">TSA qualifié + vet pour extractions seules</td>
+          <td class="text-right mono text-green">-45-60 min/procédure</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-green">
+      <strong>Le calcul pour VÉTA</strong>&nbsp;: Si chaque vet délègue 5 tâches clés aux TSA et libère en moyenne <strong>1.5h par jour</strong>,
+      c'est <strong>3 vets &times; 1.5h &times; 250 jours = 1 125 heures</strong> libérées par an.
+      À 220$/h de productivité vet, c'est <strong class="text-green">247 500$ de capacité de revenus additionnels</strong>.
+      Même si 30% seulement se convertit en revenus réels = <strong>+74K$/an</strong>.
+    </div>
+  </div>
+
+  <!-- COÛT DU ROULEMENT ET RÉTENTION -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Le roulement de personnel coûte 51-111K$/an &mdash; La rétention est un investissement, pas une dépense</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      Taux de roulement industrie&nbsp;: <strong>79%</strong> techniciens, <strong>33%</strong> admin, <strong>25%</strong> vétérinaires (2024).
+      Chaque départ coûte <strong>10-23K$</strong> (tech) à <strong>31-65K$</strong> (vet) en recrutement, formation et perte de productivité.
+    </p>
+    <div class="card-grid">
+      <div class="card" style="border-left:3px solid var(--red)">
+        <h3>Coût annuel du roulement pour VÉTA</h3>
+        <p>Si VÉTA perd 2 TSA + 0.5 vet/an (conservateur)&nbsp;:</p>
+        <p style="margin-top:4px">2 &times; 16K$ + 0.5 &times; 48K$ = <strong class="text-red">56K$/an en roulement</strong></p>
+        <p style="margin-top:8px">C'est l'équivalent de <strong>14% du résultat net négatif actuel</strong>.</p>
+        <p style="font-size:12px;color:var(--text2);margin-top:8px">Raisons principales de départ : burnout (52%), culture (45%), rémunération (42%), manque de mentorat (32%).</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--green)">
+        <h3>Programme de rétention &mdash; 10K$/an, ROI 170%</h3>
+        <p><strong>PAE (Programme d'Aide aux Employés)</strong>&nbsp;: 450-750$/an pour 15 employés. 95% des cas résolus. ROI : 4000%+.</p>
+        <p style="margin-top:6px"><strong>Grille de progression TSA</strong>&nbsp;: 4 niveaux (I/II/Senior/Principal). Augmenter un TSA de 23$ à 26$/h coûte 6 240$/an mais économise 10-23K$ de remplacement.</p>
+        <p style="margin-top:6px"><strong>Formation croisée</strong>&nbsp;: CSR &harr; TSA assistant, TSA &rarr; spécialités. Coût : 6-9K$ une fois. Flexibilité : -15-25K$/an en OT.</p>
+        <p style="margin-top:6px"><strong>Jours santé mentale</strong>&nbsp;: 2 jours/an par employé. Réduit burnout de 20-25%.</p>
+      </div>
+    </div>
+    <div class="callout callout-green">
+      <strong>Investir 10K$/an en bien-être et progression réduit le turnover de 25-40%</strong>.
+      Pour VÉTA&nbsp;: économie de <strong>14-22K$/an</strong> en coûts de remplacement &mdash; ROI net de 40-120%.
+      <br><br>
+      <strong>La meilleure stratégie MS n'est pas de couper des postes &mdash; c'est de garder les gens qu'on a.</strong>
+    </div>
+  </div>
+
+  <!-- PROGRAMME DE RECONNAISSANCE : 5 PILIERS -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Programme de reconnaissance &mdash; Le levier anti-burnout à coût quasi nul</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      Le burnout est la <strong>raison #1 de départ (52%)</strong>. La reconnaissance régulière réduit le risque d'épuisement de <strong>40-50%</strong>,
+      augmente l'engagement de <strong>35-45%</strong> et améliore la rétention de <strong>25-30%</strong>.
+      Coût&nbsp;: quasi nul. Le feedback dans les 24-48h après une action méritoire amplifie l'efficacité de <strong>60-75%</strong>.
+    </p>
+    <table style="font-size:13px">
+      <thead><tr><th>Pilier</th><th>Action concrète pour VÉTA</th><th>Fréquence</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="bold">1. Personnalisation</td>
+          <td>Catégories de reconnaissance liées aux valeurs&nbsp;: &laquo;&nbsp;Excellence patient&nbsp;&raquo;, &laquo;&nbsp;Innovation&nbsp;&raquo;, &laquo;&nbsp;Esprit d'équipe&nbsp;&raquo;</td>
+          <td>Ad hoc</td>
+        </tr>
+        <tr>
+          <td class="bold">2. Rapidité</td>
+          <td>Feedback positif <strong>dans les 24h</strong> &mdash; pas attendre la réunion mensuelle</td>
+          <td>Quotidien</td>
+        </tr>
+        <tr>
+          <td class="bold">3. Pair-à-pair</td>
+          <td>Chaque réunion d'équipe commence par 2 min de &laquo;&nbsp;shout-outs&nbsp;&raquo; entre collègues (+300-400% fréquence)</td>
+          <td>Hebdomadaire</td>
+        </tr>
+        <tr>
+          <td class="bold">4. Variété</td>
+          <td>Verbal (réunion) + écrit (notes manuscrites) + tangible (congé bonus, carte cadeau) + expérientiel (formation payée)</td>
+          <td>Mix mensuel</td>
+        </tr>
+        <tr>
+          <td class="bold">5. Alignement mission</td>
+          <td>Relier explicitement la contribution à la mission VÉTA&nbsp;: &laquo;&nbsp;Grâce à toi, ce patient a eu le meilleur suivi possible&nbsp;&raquo;</td>
+          <td>Continu</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout" style="border-left:3px solid var(--accent);margin-top:12px">
+      <strong>Quick win février&nbsp;:</strong> Instaurer les &laquo;&nbsp;shout-outs&nbsp;&raquo; pair-à-pair en début de chaque réunion d'équipe.
+      Désigner un &laquo;&nbsp;champion du bien-être&nbsp;&raquo; qui normalise les conversations sur la santé mentale.
+      Coût&nbsp;: <strong>0$</strong>. Impact&nbsp;: <strong>-40% risque burnout, +35% engagement</strong>.
+    </div>
+  </div>
+
+  <!-- GESTION DU CHANGEMENT : CADRE POUR LES 8+ PRIORITÉS -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Comment implémenter tout ça sans épuiser l'équipe &mdash; Cadre de gestion du changement</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      VÉTA s'apprête à implémenter 8+ priorités simultanément. Sans une gestion du changement structurée,
+      les initiatives échouent dans <strong>70% des cas</strong>. Les changements co-conçus ont un taux d'adoption <strong>+60-70%</strong> supérieur.
+    </p>
+    <div class="card-grid">
+      <div class="card" style="border-left:3px solid var(--accent)">
+        <h3>Les 6 phases du changement</h3>
+        <ol style="font-size:13px;padding-left:20px;line-height:2">
+          <li><strong>Urgence et &laquo;&nbsp;pourquoi&nbsp;&raquo;</strong> &mdash; communiquer clairement (+40-50% adhésion)</li>
+          <li><strong>Planification collaborative</strong> &mdash; impliquer l'équipe dans la co-création</li>
+          <li><strong>Évaluation de préparation</strong> &mdash; identifier champions et résistants</li>
+          <li><strong>Communication multi-canaux</strong> &mdash; face-à-face + écrit + visuel</li>
+          <li><strong>Soutien émotionnel</strong> &mdash; le changement suit les étapes du deuil (déni &rarr; colère &rarr; acceptation)</li>
+          <li><strong>Maintien de l'élan</strong> &mdash; suivis à 30, 60, 90 jours (+50-65% maintien)</li>
+        </ol>
+      </div>
+      <div class="card" style="border-left:3px solid var(--green)">
+        <h3>Application VÉTA &mdash; Tactiques clés</h3>
+        <p style="font-size:13px;line-height:1.8">
+          <strong>Victoires rapides (2-4 sem.)</strong>&nbsp;: Prébooking + shout-outs &rarr; résultats visibles immédiatement<br>
+          <strong>Champions informels</strong>&nbsp;: Identifier 2-3 employés respectés qui portent le changement<br>
+          <strong>Pas tout en même temps</strong>&nbsp;: Phase 1 (fév.) = 4 priorités seulement. Phase 2 (mars-mai) = 2 de plus<br>
+          <strong>Traiter la résistance comme information</strong>&nbsp;: Pas comme obstruction. Écouter, ajuster, rassurer<br>
+          <strong>Formation adéquate</strong>&nbsp;: Ne pas attendre que le personnel &laquo;&nbsp;figure it out&nbsp;&raquo;
+        </p>
+      </div>
+    </div>
+    <div class="callout callout-orange" style="margin-top:12px">
+      <strong>Piège #1 à éviter&nbsp;:</strong> Imposer 8 changements simultanément sans adhésion. Le séquencement en 3 phases est crucial.
+      <br>
+      <strong>Piège #2&nbsp;:</strong> Abandonner après 4-6 semaines. Le changement prend <strong>6-12 mois</strong> pour s'enraciner.
+      <br>
+      <strong>Piège #3&nbsp;:</strong> Optimiser l'efficacité sans considérer le bien-être humain &mdash; annule tous les gains.
+    </div>
+  </div>
+
+  <!-- SEMAINE DE 4 JOURS : CONSIDÉRATION LONG TERME -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Horizon stratégique &mdash; La semaine de 4 jours comme objectif à 18 mois</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:12px">
+      Une clinique vétérinaire suédoise a adopté la semaine de 4 jours en 2022.
+      Les résultats sont spectaculaires et servent de benchmark pour l'industrie.
+    </p>
+    <div class="card-grid" style="grid-template-columns:repeat(4,1fr)">
+      <div class="hero-card" style="border-top:3px solid var(--green)">
+        <div class="label">Chiffre d'affaires</div>
+        <div class="value text-green">+400%</div>
+        <div class="sub">4M → 20M SEK en 4 ans</div>
+      </div>
+      <div class="hero-card" style="border-top:3px solid var(--green)">
+        <div class="label">Absentéisme</div>
+        <div class="value text-green">1%</div>
+        <div class="sub">vs 4-6% secteur</div>
+      </div>
+      <div class="hero-card" style="border-top:3px solid var(--green)">
+        <div class="label">Productivité</div>
+        <div class="value text-green">+20%</div>
+        <div class="sub">sur les 4 jours</div>
+      </div>
+      <div class="hero-card" style="border-top:3px solid var(--green)">
+        <div class="label">$ recrutement</div>
+        <div class="value text-green">0$</div>
+        <div class="sub">11 → 22 employés, 2 sites</div>
+      </div>
+    </div>
+    <div class="callout" style="border-left:3px solid var(--accent);margin-top:12px">
+      <strong>Ce n'est pas pour février.</strong> Mais c'est l'objectif Phase 3 (Q4 2026).
+      <strong>Prérequis&nbsp;:</strong> Optimiser les processus actuels AVANT de réduire les heures.
+      Les 8 priorités ci-dessus sont exactement les prérequis nécessaires.
+      <br><br>
+      <strong>Modèle recommandé&nbsp;:</strong> 4&times;10h (40h/sem maintenues) avec équipes en rotation pour couverture 5-6 jours.
+      Projet pilote de 3-6 mois avant adoption définitive.
+    </div>
+  </div>
+
+  <!-- STRUCTURE DE COÛTS CIBLE -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Structure de coûts cible pour VÉTA &mdash; Où on devrait être vs où on est</h3>
+    <table style="font-size:13px">
+      <thead><tr><th>Catégorie</th><th class="text-right">VÉTA actuel</th><th class="text-right">Cible industrie</th><th class="text-right">Seuil d'alerte</th><th>Statut</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="bold">Masse salariale totale</td>
+          <td class="text-right mono text-red bold">67%</td>
+          <td class="text-right mono text-green bold">25-30%</td>
+          <td class="text-right mono">&gt; 40%</td>
+          <td><span class="tag tag-crit">CRITIQUE</span></td>
+        </tr>
+        <tr>
+          <td class="text-muted" style="padding-left:24px">Dont vétérinaires</td>
+          <td class="text-right mono text-muted">~25%*</td>
+          <td class="text-right mono">15-20%</td>
+          <td class="text-right mono">&gt; 25%</td>
+          <td><span class="tag tag-med">LIMITE</span></td>
+        </tr>
+        <tr>
+          <td class="text-muted" style="padding-left:24px">Dont personnel support</td>
+          <td class="text-right mono text-muted">~42%*</td>
+          <td class="text-right mono">10-15%</td>
+          <td class="text-right mono">&gt; 18%</td>
+          <td><span class="tag tag-crit">2.8x LA CIBLE</span></td>
+        </tr>
+        <tr>
+          <td class="bold">CMV (COGS)</td>
+          <td class="text-right mono text-orange">31%</td>
+          <td class="text-right mono text-green">18-23%</td>
+          <td class="text-right mono">&gt; 25%</td>
+          <td><span class="tag tag-med">ÉLEVÉ</span></td>
+        </tr>
+        <tr>
+          <td class="bold">Loyer</td>
+          <td class="text-right mono text-green">6.5%</td>
+          <td class="text-right mono">5-10%</td>
+          <td class="text-right mono">&gt; 12%</td>
+          <td><span class="tag tag-fix">OK</span></td>
+        </tr>
+        <tr>
+          <td class="bold">Frais généraux</td>
+          <td class="text-right mono">~10%</td>
+          <td class="text-right mono">20-30%</td>
+          <td class="text-right mono">&gt; 35%</td>
+          <td><span class="tag tag-fix">OK</span></td>
+        </tr>
+        <tr>
+          <td class="bold">EBITDA</td>
+          <td class="text-right mono text-red bold">-15%</td>
+          <td class="text-right mono text-green bold">15-20%</td>
+          <td class="text-right mono">&lt; 12%</td>
+          <td><span class="tag tag-crit">NÉGATIF</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:11px;color:var(--text2);margin-top:8px">
+      *Estimations basées sur la ventilation ER Q4. Le personnel support inclut TSA, CSR, admin et charges associées (vacances, bonus, REER).
+      La cible industrie de 25-30% MS totale est pour les cliniques bien gérées de 1.5M$+ de revenus.
+    </p>
+    <div class="callout callout-orange">
+      <strong>Le diagnostic clé&nbsp;:</strong> La MS de VÉTA est à <strong>67%</strong> vs une cible de <strong>25-30%</strong>.
+      Mais une grande partie de cet écart vient du fait que le <strong>revenu par heure-staff est trop bas</strong> (80.87$/h vs 95$/h cible),
+      pas du fait qu'il y a trop d'employés. Le CMV à 31% (vs 18-23%) est le 2e problème &mdash;
+      revoir les ententes fournisseurs et les marges sur produits vendus.
+    </div>
+  </div>
+
+  <!-- STRATÉGIE RELIEF VET ET OPTIMISATION COMPENSATION -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Stratégie hybride vétérinaires de relève &mdash; Économie de 40K$/an</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      Pour une clinique nécessitant 2,5 FTE de capacité vétérinaire (3 DVMs avec absences, vacances et variation de charge),
+      la stratégie hybride est plus rentable que 3 temps pleins.
+    </p>
+    <table style="font-size:13px">
+      <thead><tr><th>Scénario</th><th class="text-right">Coût annuel</th><th>Flexibilité</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="bold">3 vétérinaires temps plein</td>
+          <td class="text-right mono text-red">363 240$</td>
+          <td>Rigide &mdash; surcoût si volume bas</td>
+        </tr>
+        <tr>
+          <td class="bold">2 temps plein + relief 0.5 FTE (~115 jours)</td>
+          <td class="text-right mono text-green">322 660$</td>
+          <td>Flexible &mdash; ajuste selon la demande</td>
+        </tr>
+        <tr style="background:var(--green-bg)">
+          <td class="bold">Économie annuelle</td>
+          <td class="text-right mono text-green bold">40 580$ (11,2%)</td>
+          <td>+ meilleure gestion de la saisonnalité</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--text2);margin-top:12px">
+      <strong>Taux relief au Québec urbain&nbsp;:</strong> 70-100$/h ou 600-850$/jour.
+      <strong>Attention&nbsp;:</strong> Les relief vets n'ont pas la même continuité de soins &mdash; réserver pour couverture vacances, pics saisonniers et jours de surchauffe.
+    </p>
+  </div>
+
+  <!-- COMPENSATION : NEGATIVE ACCRUAL -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Modèle de compensation vétérinaire &mdash; Production avec salaire de base</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:12px">
+      54% des cliniciens et 69% des nouveaux diplômés reçoivent une compensation basée sur la production. Le modèle dominant&nbsp;: salaire de base + commission 20-22% si la production dépasse le salaire versé.
+    </p>
+    <div class="card-grid">
+      <div class="card" style="border-left:3px solid var(--accent)">
+        <h3>Seuil de rentabilité par DVM</h3>
+        <p>Pour couvrir un salaire de 90K$ avec commission de 21%&nbsp;:</p>
+        <p style="margin-top:4px"><strong class="mono">90K$ &divide; 0.21 = 428 571$ de production minimale</strong></p>
+        <p style="margin-top:8px;font-size:12px;color:var(--text2)">Sous ce seuil, le DVM coûte plus qu'il ne rapporte. C'est le concept de <em>negative accrual</em> &mdash; le déficit peut s'accumuler d'un trimestre à l'autre selon le contrat.</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--green)">
+        <h3>Application pour VÉTA</h3>
+        <p>Dre Cockburn&nbsp;: <strong>117K$/trim = 468K$/an</strong> &rarr; au-dessus du seuil</p>
+        <p>Dre Cohen&nbsp;: <strong>73K$/trim = 292K$/an</strong> &rarr; en dessous (temps partiel?)</p>
+        <p>Dre Brazeau&nbsp;: <strong>22K$/2 sem. &asymp; 572K$/an</strong> &rarr; forte productrice</p>
+        <p style="margin-top:8px;font-size:12px;color:var(--text2)">Valider les contrats de compensation pour s'assurer que le modèle incite à la productivité sans pénaliser les DVMs par un negative accrual excessif.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECHNOLOGIES : PIMS ROI + TÉLÉMÉDECINE -->
+  <div class="card card-full" style="margin-bottom:24px">
+    <h3>Technologies à fort ROI &mdash; PIMS, AI Scribe et Télémédecine</h3>
+    <table style="font-size:13px">
+      <thead><tr><th>Initiative</th><th class="text-right">Investissement/an</th><th class="text-right">Retour estimé/an</th><th class="text-right">ROI</th><th>Horizon</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="bold">PIMS moderne (ezyVet/Neo) + rappels auto</td>
+          <td class="text-right mono">5 000$</td>
+          <td class="text-right mono text-green">45-85K$</td>
+          <td class="text-right mono text-green bold">808-1596%</td>
+          <td>Phase 2 (Mois 4-9)</td>
+        </tr>
+        <tr>
+          <td class="bold">AI Scribe (documentation vétérinaire)</td>
+          <td class="text-right mono">2 400-4 800$</td>
+          <td class="text-right mono text-green">30-100K$ (capacité)</td>
+          <td class="text-right mono text-green bold">1983-4067%</td>
+          <td>Phase 3 (Mois 10-18)</td>
+        </tr>
+        <tr>
+          <td class="bold">Télémédecine (triage + suivis + chroniques)</td>
+          <td class="text-right mono">3 000-6 000$</td>
+          <td class="text-right mono text-green">63-106K$</td>
+          <td class="text-right mono text-green bold">950-3433%</td>
+          <td>Phase 3 (Mois 10-18)</td>
+        </tr>
+        <tr>
+          <td class="bold">Communications clients automatisées</td>
+          <td class="text-right mono">600-1 800$</td>
+          <td class="text-right mono text-green">25-35K$</td>
+          <td class="text-right mono text-green bold">1289-5733%</td>
+          <td>Phase 2 (Mois 4-9)</td>
+        </tr>
+        <tr style="background:var(--green-bg);font-weight:600">
+          <td>TOTAL TECHNOLOGIES</td>
+          <td class="text-right mono">11-18K$</td>
+          <td class="text-right mono text-green">163-326K$</td>
+          <td class="text-right mono text-green bold">1381-2872%</td>
+          <td>Progressif 18 mois</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout callout-green" style="margin-top:16px">
+      <strong>L'AI Scribe seul libère 2-3h/jour par vétérinaire</strong> de documentation.
+      Même si seulement 30% se convertit en consultations additionnelles = <strong>30K$/an par DVM</strong>.
+      C'est l'investissement au meilleur ROI de toute la liste.
+    </div>
+    <p style="font-size:12px;color:var(--text2);margin-top:12px">
+      <strong>Télémédecine détaillée&nbsp;:</strong>
+      Triage payant (25$/micro-consult) = 15-25K$/an &middot;
+      Suivis post-op digitaux (200-300 consults récupérées) = 30-45K$/an &middot;
+      Monitoring conditions chroniques (20-40 patients x 75$/mois) = 18-36K$/an.
+    </p>
+  </div>
+
+  <!-- RÉSUMÉ IMPACT TOTAL -->
+  <div class="card card-full" style="background:var(--surface2);margin-bottom:24px">
+    <h3 style="font-size:18px">Impact cumulatif des 8 priorités &mdash; Potentiel trimestriel</h3>
+    <table style="font-size:14px">
+      <thead><tr><th>Priorité</th><th class="text-right">Impact estimé / trim.</th><th>Difficulté</th><th>Délai</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="bold">#1 Prébooking 37% &rarr; 55%</td>
+          <td class="text-right mono text-green bold">+70 000$</td>
+          <td><span class="tag tag-med">PROCESSUS</span></td>
+          <td>Immédiat</td>
+        </tr>
+        <tr>
+          <td class="bold">#2 Mardi optimisé</td>
+          <td class="text-right mono text-green">+15 000$</td>
+          <td><span class="tag tag-med">PLANIF</span></td>
+          <td>Février</td>
+        </tr>
+        <tr>
+          <td class="bold">#3 Bloc chirurgie quotidien</td>
+          <td class="text-right mono text-green">+40 000$</td>
+          <td><span class="tag tag-med">PLANIF</span></td>
+          <td>Février</td>
+        </tr>
+        <tr>
+          <td class="bold">#4 Audit charges manquées</td>
+          <td class="text-right mono text-green">+20 000$</td>
+          <td><span class="tag tag-fix">FACILE</span></td>
+          <td>Février</td>
+        </tr>
+        <tr>
+          <td class="bold">#5 Plans de bien-être</td>
+          <td class="text-right mono text-green">+5 000$ net Y1 (croissant)</td>
+          <td><span class="tag tag-med">MOYEN</span></td>
+          <td>Mai (Phase 0 fév.)</td>
+        </tr>
+        <tr>
+          <td class="bold">#6 Expansion dentaire</td>
+          <td class="text-right mono text-green">+24 000$</td>
+          <td><span class="tag tag-med">MÉDICAL</span></td>
+          <td>Mars</td>
+        </tr>
+        <tr>
+          <td class="bold">#7 Time-blocking horaire</td>
+          <td class="text-right mono text-green">inclus dans #2-#3</td>
+          <td><span class="tag tag-fix">FACILE</span></td>
+          <td>Février</td>
+        </tr>
+        <tr>
+          <td class="bold">#8 Délégation maximale aux TSA</td>
+          <td class="text-right mono text-green">+18 500$ (30% de 74K$/an)</td>
+          <td><span class="tag tag-med">FORMATION</span></td>
+          <td>Mars</td>
+        </tr>
+        <tr style="background:var(--red-bg)">
+          <td class="bold">Roulement évité (programme rétention)</td>
+          <td class="text-right mono text-green">+4 000$ (net de l'investissement)</td>
+          <td><span class="tag tag-fix">FACILE</span></td>
+          <td>Février</td>
+        </tr>
+        <tr style="background:var(--surface);font-size:16px" class="bold">
+          <td>POTENTIEL TOTAL</td>
+          <td class="text-right mono text-green">+199 000$ / trim</td>
+          <td colspan="2"><span class="tag tag-fix" style="font-size:12px">De -61K$ &rarr; +138K$</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout callout-green">
+      <strong>Ce n'est pas un rêve &mdash; c'est de la mathématique.</strong>
+      VÉTA génère 414K$/trim de revenu avec 851 animaux uniques.
+      Le revenu n'est pas le problème. Les fuites de revenus (charges manquées, prébooking bas, ATV en baisse) et la structure de coûts le sont.
+      Chaque priorité ci-dessus a un impact mesurable et un propriétaire identifié.
+      <br><br>
+      <strong>Phase 1 (Fév.)&nbsp;:</strong> Priorités #1-#4 (impact immédiat, coût nul) = <strong>+145K$/trim</strong>.
+      <br>
+      <strong>Phase 2 (Mars-Mai)&nbsp;:</strong> Priorités #5-#6 (investissement modéré) = <strong>+31K$/trim croissant</strong>.
+      <br>
+      <strong>Phase 3 (Q3-Q4)&nbsp;:</strong> Technologies (AI Scribe, PIMS, télémédecine) = <strong>+40-80K$/trim</strong> à maturité.
+    </div>
+  </div>
+
+  <!-- ===== TABLEAU DE BORD ===== -->
+  <div class="sep"></div>
+  <div class="card card-full" style="background:var(--surface2)">
+    <h3 style="font-size:18px;margin-bottom:16px">Le tableau de bord de la victoire</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:16px">
+      &laquo;&nbsp;What gets measured gets managed&nbsp;&raquo; (Drucker). Cinq chiffres à afficher chaque jour dans l'aire de travail.
+    </p>
+    <table style="font-size:14px">
+      <thead><tr><th>KPI</th><th class="text-right">Aujourd'hui</th><th class="text-right">Cible février</th><th class="text-right">Cible mars</th><th>Propriétaire</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="bold">Prébooking quotidien</td>
+          <td class="text-right mono text-red bold">37%</td>
+          <td class="text-right mono text-yellow bold">50%</td>
+          <td class="text-right mono text-green bold">55%</td>
+          <td>Audrée</td>
+        </tr>
+        <tr>
+          <td class="bold">Ratio MS quotidien</td>
+          <td class="text-right mono text-red bold">57%</td>
+          <td class="text-right mono text-yellow bold">50%</td>
+          <td class="text-right mono text-green bold">45%</td>
+          <td>Nancy</td>
+        </tr>
+        <tr>
+          <td class="bold">Revenu du jour</td>
+          <td class="text-right mono">6 628$</td>
+          <td class="text-right mono bold">7 500$</td>
+          <td class="text-right mono bold">8 000$</td>
+          <td>Direction med.</td>
+        </tr>
+        <tr>
+          <td class="bold">Annulations documentées</td>
+          <td class="text-right mono text-red">40%</td>
+          <td class="text-right mono text-yellow">80%</td>
+          <td class="text-right mono text-green">95%</td>
+          <td>Équipe entière</td>
+        </tr>
+        <tr>
+          <td class="bold">Ratio mardi</td>
+          <td class="text-right mono text-red bold">67%</td>
+          <td class="text-right mono text-yellow bold">55%</td>
+          <td class="text-right mono text-green bold">50%</td>
+          <td>Nancy</td>
+        </tr>
+        <tr>
+          <td class="bold">Charges manquées (audit)</td>
+          <td class="text-right mono text-muted">N/D</td>
+          <td class="text-right mono text-yellow">Audit fait</td>
+          <td class="text-right mono text-green bold">&lt;2%</td>
+          <td>Direction med.</td>
+        </tr>
+        <tr>
+          <td class="bold">Clients wellness plan</td>
+          <td class="text-right mono text-muted">0</td>
+          <td class="text-right mono text-yellow">Design prêt</td>
+          <td class="text-right mono text-green bold">25 inscrits</td>
+          <td>Direction</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout" style="border-left:3px solid var(--accent);margin-top:16px">
+      <strong>&laquo;&nbsp;Discipline Equals Freedom.&nbsp;&raquo;</strong> Ces 5 chiffres sont revus chaque jour à 17h.
+      Pas de rapport mensuel qui arrive 3 mois trop tard. Pas d'excuses. Les chiffres parlent.
+      Si un KPI dérive, on agit le lendemain &mdash; pas le mois prochain.
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 6 : DECISIONS ===================== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num cyan">6</div>
+    <div class="section-title">Décisions à prendre aujourd'hui</div>
+  </div>
+
+  <div class="card card-full" style="margin-bottom:24px">
+    <table>
+      <thead><tr><th style="width:40px">#</th><th>Question</th><th>Recommandation</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="text-center bold">1</td>
+          <td>Est-ce que les 40K$ de salaires extra de décembre sont normaux (vacances/bonus)?</td>
+          <td class="text-yellow bold">À valider avec le comptable cette semaine</td>
+        </tr>
+        <tr>
+          <td class="text-center bold">2</td>
+          <td>Est-ce que les 48K$ de frais pro d'octobre vont se répéter?</td>
+          <td class="text-green bold">Confirmé ponctuel &mdash; événement isolé</td>
+        </tr>
+        <tr>
+          <td class="text-center bold">3</td>
+          <td>Quel seuil d'alerte pour le ratio masse salariale?</td>
+          <td class="text-green">50% comme seuil d'alerte &mdash; réaliste vu les charges réelles</td>
+        </tr>
+        <tr>
+          <td class="text-center bold">4</td>
+          <td>Objectif prébooking pour février?</td>
+          <td class="text-green">50% &mdash; étape intermédiaire avant la cible de 55%</td>
+        </tr>
+        <tr>
+          <td class="text-center bold">5</td>
+          <td>Source de vérité pour les rapports financiers mensuels?</td>
+          <td class="text-green">États des résultats (comptable) &mdash; seule source complète</td>
+        </tr>
+        <tr>
+          <td class="text-center bold">6</td>
+          <td>Veut-on lancer un plan de bien-être (wellness plan)?</td>
+          <td class="text-yellow bold">Oui, conditionnel &mdash; validation OMVQ Article 20 (TPA requis) d'ici 14 fév, puis design mars, pilote mai</td>
+        </tr>
+        <tr>
+          <td class="text-center bold">7</td>
+          <td>Veut-on auditer les charges manquées (missed charges)?</td>
+          <td class="text-green bold">Oui &mdash; 20 dossiers aléatoires d'ici 14 février</td>
+        </tr>
+        <tr>
+          <td class="text-center bold">8</td>
+          <td>Intégrer l'examen dentaire systématique à chaque visite?</td>
+          <td class="text-green">Oui &mdash; avec photos dentaires montrées au client</td>
+        </tr>
+        <tr>
+          <td class="text-center bold">9</td>
+          <td>Explorer la stratégie hybride (2 FTP + relief) pour la couverture vétérinaire?</td>
+          <td class="text-green bold">Oui &mdash; évaluer l'utilisation de relief vets pour pics et vacances (éco. 40K$/an)</td>
+        </tr>
+        <tr>
+          <td class="text-center bold">10</td>
+          <td>Investir dans un AI Scribe pour la documentation vétérinaire?</td>
+          <td class="text-yellow">Phase 3 &mdash; évaluer les options en Q2 (ROI 2000%+, coût 2-5K$/an)</td>
+        </tr>
+        <tr>
+          <td class="text-center bold">11</td>
+          <td>Instaurer un programme de reconnaissance pair-à-pair dès février?</td>
+          <td class="text-green bold">Oui &mdash; shout-outs en réunion + champion bien-être (coût : 0$, impact : -40% burnout)</td>
+        </tr>
+        <tr>
+          <td class="text-center bold">12</td>
+          <td>Viser la semaine de 4 jours comme objectif Q4 2026?</td>
+          <td class="text-yellow">Objectif aspirationnel &mdash; les 8 priorités sont les prérequis</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3 style="color:var(--green)">Ce qui va bien</h3>
+      <ul style="list-style:none;padding:0">
+        <li style="padding:8px 0;font-size:14px;border-bottom:1px solid var(--border)">Le revenu tient : <strong>~138K$/mois</strong> en Q4, stable malgré la saisonnalité</li>
+        <li style="padding:8px 0;font-size:14px;border-bottom:1px solid var(--border)">No-show sous contrôle à <strong>1.5%</strong> en janvier (cible : 3%)</li>
+        <li style="padding:8px 0;font-size:14px;border-bottom:1px solid var(--border)">Boutique en ligne en croissance : <strong>4K$ &rarr; 8K$/mois</strong></li>
+        <li style="padding:8px 0;font-size:14px;border-bottom:1px solid var(--border)">Dre Brazeau confirme son intégration (<strong>22K$</strong> en 2 semaines janvier)</li>
+        <li style="padding:8px 0;font-size:14px">Agence de placement éliminée (était 31K$ au premier semestre)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--red)">Ce qui doit changer</h3>
+      <ul style="list-style:none;padding:0">
+        <li style="padding:8px 0;font-size:14px;border-bottom:1px solid var(--border)"><strong>3 mois de perte</strong> consécutifs (-151K$ au Q4)</li>
+        <li style="padding:8px 0;font-size:14px;border-bottom:1px solid var(--border)">Ratio MS à <strong>61%</strong> (cible : sous 45%)</li>
+        <li style="padding:8px 0;font-size:14px;border-bottom:1px solid var(--border)">Prébooking à <strong>37%</strong> et en baisse (cible : 55%+)</li>
+        <li style="padding:8px 0;font-size:14px;border-bottom:1px solid var(--border)">Valeur par visite en baisse : <strong>220$ &rarr; 189$</strong></li>
+        <li style="padding:8px 0;font-size:14px;border-bottom:1px solid var(--border)">Nos rapports internes <strong>sous-estiment les coûts de 46K$</strong></li>
+        <li style="padding:8px 0;font-size:14px;border-bottom:1px solid var(--border)"><strong>Charges manquées</strong> : potentiel 5-10% de fuites (20-40K$/trim)</li>
+        <li style="padding:8px 0;font-size:14px;border-bottom:1px solid var(--border)"><strong>Aucun plan de bien-être</strong> : 0$ de revenus récurrents mensuels (potentiel perdu : 5-16K$/an net + compliance +30-40%)</li>
+        <li style="padding:8px 0;font-size:14px"><strong>Dentaire sous-utilisé</strong> : 2.5-3.5% du revenu vs potentiel 8-10%</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p><strong>CLINIQUE VETA INC.</strong> &middot; Document préparé pour la rencontre du 28 janvier 2026</p>
+  <p style="margin-top:4px">
+    <strong>Sources financières&nbsp;:</strong> États des résultats Sept/Oct/Nov/Dec 2025 (comptabilité officielle, imprimés le 2026-01-23)
+  </p>
+  <p style="margin-top:4px">
+    <strong>Sources opérationnelles&nbsp;:</strong> EzyVet (revenu, production par vet) &middot; Rapport KPI quotidien 12-24 jan (Supabase)
+  </p>
+  <p style="margin-top:8px;font-style:italic">
+    Confidentiel &mdash; Usage interne uniquement
+  </p>
+</div>
+
+</div>
+</body>
+</html>
